@@ -1,28 +1,5 @@
 import { css, keyframes } from 'styled-components';
 
-const loadingAnimation = keyframes`
-    0% {
-        transform: translateX(0);
-    }
-
-    50%,
-    100% {
-        transform: translateX(460px);
-    }
-`;
-
-const opacityAnimation = keyframes`
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-`;
-
 const mixins = {
     flex: css`
         display: flex;
@@ -74,22 +51,6 @@ const mixins = {
         height: 100%;
         width: 100%;
         z-index: 100;
-    `,
-
-    loading: css`
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 40px;
-        animation: ${loadingAnimation} 2s infinite linear;
-        background: linear-gradient(90deg, var(--secondary-text-color-light) 0px, var(--divider-color) 40px, var(--secondary-text-color-light) 80px);
-        opacity: 0.1;
-    `,
-
-    opacityAnimation: css`
-        animation: ${opacityAnimation} 0.4s ease;
     `,
 
     button: css`

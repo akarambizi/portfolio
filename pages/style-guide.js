@@ -1,17 +1,17 @@
 import React from 'react';
-import { Button } from '../styles/elements';
+import { Title, Button, Wrapper } from '../styles/elements';
 
 function StyleGuide() {
     return (
-        <section>
+        <Wrapper>
             <p>Style Guide</p>
             <div>
                 <p>Typography</p>
                 <span>Poppins</span>
-                <h1>Heading 1</h1>
-                <h2>Heading 1</h2>
-                <h3>Heading 1</h3>
-                <h4>Heading 1</h4>
+                <Title>Heading 1</Title>
+                <Title as="h2">Heading 2</Title>
+                <Title as="h3">Heading 3</Title>
+                <Title as="h4">Heading 4</Title>
                 <p>Body text</p>
                 <p>Text text</p>
             </div>
@@ -50,7 +50,7 @@ function StyleGuide() {
                 <Button secondary>login</Button>
                 <Button>Sign Up</Button>
             </div>
-        </section>
+        </Wrapper>
     );
 }
 

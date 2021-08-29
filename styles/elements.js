@@ -30,15 +30,26 @@ export const Grid = styled.section`
 `;
 
 const titles = {
-    h2: 'font-size: 40px;',
-    h3: 'font-size: 30px;',
-    h4: 'font-size: 24px;',
-    h5: 'font-size: 20px;',
-    h6: 'font-size: 18px;'
+    h1: {
+        'font-size': 'var(--font-size-xxl)',
+        'line-height': '62px'
+    },
+    h2: {
+        'font-size': 'var(--font-size-xl)',
+        'line-height': '46px'
+    },
+    h3: {
+        'font-size': 'var(--font-size-lg)',
+        'line-height': '54px'
+    },
+    h4: {
+        'font-size': 'var(--font-size-md)',
+        'line-height': '36px'
+    }
 };
 
 export const Title = styled.h1`
-    ${({ as: tag }) => (tag in titles ? titles[tag] : 'font-size: 44px;')};
+    ${({ as: tag }) => (tag in titles ? titles[tag] : titles['h1'])};
     margin-bottom: ${({ marginBottom }) => marginBottom || '10px'};
     width: ${({ fullWidth }) => fullWidth && '100%'};
     font-family: var(--font-secondary);
