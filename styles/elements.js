@@ -18,7 +18,7 @@ export const Grid = styled.section`
     display: grid;
     align-items: center;
     gap: 0 24px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
     /* horizontal-card */
     /* grid-template-columns: 1fr 1fr; */
     padding: ${({ spacing }) => spacing && '10px 0'};
@@ -32,19 +32,23 @@ export const Grid = styled.section`
 const titles = {
     h1: {
         'font-size': 'var(--font-size-xxl)',
-        'line-height': '62px'
+        'line-height': '62px',
+        'font-weight': '600'
     },
     h2: {
         'font-size': 'var(--font-size-xl)',
-        'line-height': '46px'
+        'line-height': '46px',
+        'font-weight': '600'
     },
     h3: {
         'font-size': 'var(--font-size-lg)',
-        'line-height': '54px'
+        'line-height': '54px',
+        'font-weight': '500'
     },
     h4: {
         'font-size': 'var(--font-size-md)',
-        'line-height': '36px'
+        'line-height': '36px',
+        'font-weight': '500'
     }
 };
 
@@ -52,8 +56,6 @@ export const Title = styled.h1`
     ${({ as: tag }) => (tag in titles ? titles[tag] : titles['h1'])};
     margin-bottom: ${({ marginBottom }) => marginBottom || '10px'};
     width: ${({ fullWidth }) => fullWidth && '100%'};
-    font-family: var(--font-secondary);
-    font-weight: 700;
     letter-spacing: 0;
     text-align: ${({ centered }) => centered && 'center'};
 `;
@@ -63,9 +65,9 @@ export const Text = styled.p`
     margin-bottom: 10px;
     width: ${({ width }) => width};
     color: ${({ secondary }) => (secondary ? 'var(--primary-color)' : 'var(--primary-text-color)')};
-    font-size: ${({ bold }) => (bold ? 'var(--font-size-xl)' : 'var(--font-size-md)')};
-    font-weight: ${({ bold }) => bold && '700'};
-    line-height: 24px;
+    font-size: ${({ md }) => (md ? 'var(--font-size-md)' : 'var(--font-size-text)')};
+    font-weight: ${({ bold }) => bold && '600'};
+    line-height: 28px;
 
     ${({ heading, fullWidth, centered, marginBottom, sm }) => {
         return (
@@ -149,4 +151,10 @@ export const Tab = styled.button`
         padding: ${({ active }) => (active ? '6px 18px' : '8px 18px')};
         font-size: 14px;
     }
+`;
+
+export const ColorBox = styled.div`
+    height: 90px;
+    background: ${({ bg }) => `var(--${bg})`};
+    border-radius: 15px;
 `;

@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
         color: var(--primary-text-color);
         font-family: var(--font-primary);
         width: 100%;
+        background: #D8D8D8;
     }
 
     h1,

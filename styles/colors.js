@@ -1,13 +1,13 @@
 const colors = {
-    '--accent-color': '#00BCD4',
-    '--divider-color': '#DBDBDB',
-    '--primary-color-dark': '#71A1D8',
-    '--primary-color-light': '#C8E6C9',
-    '--primary-color-text': '#FFFFFF',
-    '--primary-color': '#00bd70',
+    '--primary-color': '#EEBF63',
     '--primary-text-color': '#212121',
-    '--secondary-text-color-light': '#f7f7f7',
+    '--primary-color-dark': '#1C1C1C',
+    '--primary-color-light': '#F1F1F1',
+    '--primary-color-text': '#FFFFFF',
     '--secondary-text-color': '#717171',
+    '--secondary-text-color-light': '#f7f7f7',
+    '--accent-color': '#00BCD4',
+    '--divider-color': '#E1E1E1',
 };
 
 export default colors;

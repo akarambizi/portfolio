@@ -55,24 +55,23 @@ const mixins = {
 
     button: css`
         display: ${({ inlineBlock }) => (inlineBlock ? 'inline-block' : 'block')};
-        border: ${({ secondary }) => (secondary ? '1px solid var(--divider-color)' : '1px solid var(--primary-color)')};
+        border: 2px solid var(--primary-color);
         padding: 14px 20px;
         width: ${({ width }) => width};
         min-width: 142px;
         border-radius: 5px;
         color: ${({ secondary }) => (secondary ? 'var(--primary-text-color)' : 'var(--primary-color-text)')};
         background: ${({ secondary }) => (secondary ? 'var(--primary-color-text)' : 'var(--primary-color)')};
-        box-shadow: ${({ shadow }) => (shadow ? '0px 10px 24px rgba(0, 0, 0, 0.19)' : null)};
         cursor: pointer;
         font-size: var(--font-size-sm);
         line-height: 16px;
         text-transform: capitalize;
         text-align: center;
-        transition: 0.3s;
+        transition: all 0.3s ease;
 
         &:hover {
             background: var(--primary-color-light);
-            border: 1px solid var(--primary-color-light);
+            border: 2px solid var(--primary-color-light);
             color: var(--primary-text-color);
         }
     `,
