@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 // import arrowUrl from '../assets/images/icon-angle-down.svg';
 import colors from './colors';
 import fonts from './fonts';
-import mixins from './mixins';
 import normalize from './normalize';
+import media from './media';
 
 const GlobalStyles = createGlobalStyle`
     ${normalize};
@@ -11,6 +11,11 @@ const GlobalStyles = createGlobalStyle`
     :root {
         ${colors};
         ${fonts};
+        font-size: 14px;
+
+        ${media.laptop} {
+            font-size: 16px;
+        }
     }
 
     body {

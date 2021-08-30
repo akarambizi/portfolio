@@ -1,11 +1,11 @@
 const fonts = {
     '--font-primary': "'Poppins', sans-serif",
-    '--font-size-text': '16px',
-    '--font-size-sm': '18px',
-    '--font-size-md': '24px',
-    '--font-size-lg': '32px',
-    '--font-size-xl': '36px',
-    '--font-size-xxl': '48px',
+    '--font-size-text': '1rem',
+    '--font-size-sm': '1.125rem',
+    '--font-size-md': '1.5rem',
+    '--font-size-lg': '2rem',
+    '--font-size-xl': '2.25rem',
+    '--font-size-xxl': '3rem',
 };
 
 export default fonts;
