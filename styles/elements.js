@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     ${media.laptop} {
         margin: 0 auto;
         padding: 0;
-        max-width: 1240px;
+        max-width: 1110px;
     }
 `;
 
@@ -17,7 +17,7 @@ export const Grid = styled.section`
     flex-wrap: wrap;
     display: grid;
     align-items: center;
-    gap: 0 24px;
+    gap: 0 30px;
     grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
     /* horizontal-card */
     /* grid-template-columns: 1fr 1fr; */
