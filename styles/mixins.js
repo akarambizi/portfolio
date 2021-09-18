@@ -24,6 +24,11 @@ const mixins = {
         flex-direction: column;
     `,
 
+    flexAlignCenter: css`
+        display: flex;
+        align-items: center;
+    `,
+
     grid: css`
         display: grid;
         align-items: center;

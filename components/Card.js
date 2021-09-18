@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Text } from '../styles/elements';
 
-const CardImageLink = styled.a`
+const StyledCardImageLink = styled.a`
     display: block;
     position: relative;
 
@@ -43,9 +43,9 @@ const CardImageLink = styled.a`
 function Card({ data: { name, image, links, tags } }) {
     return (
         <article>
-            <CardImageLink>
+            <StyledCardImageLink>
                 <img src={image} alt={name} layout="fill" />
-            </CardImageLink>
+            </StyledCardImageLink>
             <div>
                 <Text bold>{name}</Text>
                 <div>

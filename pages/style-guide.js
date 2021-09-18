@@ -1,4 +1,4 @@
-import { Title, Button, Wrapper, Grid, Text, ColorBox } from '../styles/elements';
+import { Title, Button, StyledWrapper, Grid, Text, ColorBox } from '../styles/elements';
 import projects from '../api/projects';
 import Card from '../components/Card';
 

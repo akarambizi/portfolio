@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { media } from '.';
 import mixins from './mixins';
 
-export const Wrapper = styled.div`
+export const StyledWrapper = styled.div`
     padding: 0 20px;
+    width: 100%;
 
     ${media.laptop} {
         margin: 0 auto;
