@@ -23,12 +23,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--font-primary);
         width: 100%;
         word-wrap: break-word;
-
-        ${'' /* background: #D8D8D8; */}
-
-        main {
-            background: violet;
-        }
+        ${'' /* box-sizing: border-box; */}
+        ${'' /* overflow-x: hidden;
+        overflow-y: scroll; */}
+        overflow: auto;
     }
 
     h1,

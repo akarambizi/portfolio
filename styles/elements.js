@@ -3,9 +3,10 @@ import { media } from '.';
 import mixins from './mixins';
 
 export const StyledWrapper = styled.div`
+    /* min-width: 100%; */
     padding: 0 20px;
-     max-width: 1225px;
-     margin: 0 auto;
+    max-width: 1225px;
+    margin: 0 auto;
 `;
 
 export const Grid = styled.section`

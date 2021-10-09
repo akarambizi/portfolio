@@ -33,7 +33,6 @@ const mixins = {
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     `,
 
     flexAlignCenter: css`
