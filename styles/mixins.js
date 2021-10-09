@@ -3,29 +3,42 @@ import { css, keyframes } from 'styled-components';
 const mixins = {
     flex: css`
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 30px;
     `,
 
     flexCenter: css`
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     `,
 
     flexBetween: css`
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
     `,
 
     flexColumn: css`
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
+    `,
+
+    flexColumnCenter: css`
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     `,
 
     flexAlignCenter: css`
         display: flex;
+        flex-direction: column;
         align-items: center;
     `,
 

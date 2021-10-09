@@ -5,7 +5,7 @@ const fonts = {
     '--font-size-md': '1.5rem',
     '--font-size-lg': '2rem',
     '--font-size-xl': '2.25rem',
-    '--font-size-xxl': '3rem',
+    '--font-size-xxl': '2.5rem',
 };
 
 export default fonts;

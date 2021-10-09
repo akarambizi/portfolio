@@ -8,12 +8,20 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHeaderWrapper = styled(StyledWrapper)`
-    padding: 20px;
-    background-color: lightblue;
-
     ${mixins.flexBetween}
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* background-color: lightblue; */
+
     ul {
         ${mixins.flex}
+    }
+`;
+
+const StyledLogo = styled.div`
+    a {
+        font-size: 18px;
+        font-weight: bold;
     }
 `;
 
@@ -21,7 +29,9 @@ function Header() {
     return (
         <StyledHeader>
             <StyledHeaderWrapper>
-                <Link href="/">Ak</Link>
+                <StyledLogo>
+                    <Link href="/">Ak</Link>
+                </StyledLogo>
                 <ul>
                     <li>
                         <Link href="/about">About</Link>

@@ -4,12 +4,12 @@ import Card from '../components/Card';
 
 function StyleGuide() {
     return (
-        <Wrapper>
+        <StyledWrapper>
             <section>
-                <Title centered>Style Guide</Title>
+                <Title centered="true">Style Guide</Title>
                 <Grid>
                     <div>
-                        <Text bold>Typography</Text>
+                        <Text bold="true">Typography</Text>
                         <span>Poppins</span>
                         <Title>Heading 1</Title>
                         <Title as="h2">Heading 2</Title>
@@ -20,7 +20,7 @@ function StyleGuide() {
                     </div>
                     <div>
                         <div>
-                            <Text bold>Colors</Text>
+                            <Text bold="true">Colors</Text>
                             <span>Primary Color</span>
                             <Grid>
                                 <ColorBox bg="primary-color"></ColorBox>
@@ -31,7 +31,7 @@ function StyleGuide() {
                             </Grid>
                         </div>
                         <div>
-                            <Text bold>Tertiary Color</Text>
+                            <Text bold="true">Tertiary Color</Text>
                             <Grid>
                                 <ColorBox bg="secondary-text-color"></ColorBox>
                                 <ColorBox bg="secondary-text-color-light"></ColorBox>
@@ -42,22 +42,22 @@ function StyleGuide() {
                     </div>
                 </Grid>
                 <div>
-                    <Text bold>Buttons</Text>
+                    <Text bold="true">Buttons</Text>
                     <Grid>
                         <Button>Normal</Button>
-                        <Button secondary>Outline</Button>
+                        <Button secondary="true">Outline</Button>
                     </Grid>
                 </div>
             </section>
             <section>
-                <Title centered>Components</Title>
+                <Title centered="true">Components</Title>
                 <Grid>
                     {projects.map((project) => (
                         <Card data={project} key={project.name} />
                     ))}
                 </Grid>
             </section>
-        </Wrapper>
+        </StyledWrapper>
     );
 }
 

@@ -4,13 +4,8 @@ import mixins from './mixins';
 
 export const StyledWrapper = styled.div`
     padding: 0 20px;
-    width: 100%;
-
-    ${media.laptop} {
-        margin: 0 auto;
-        padding: 0;
-        max-width: 1110px;
-    }
+     max-width: 1225px;
+     margin: 0 auto;
 `;
 
 export const Grid = styled.section`
@@ -33,22 +28,22 @@ export const Grid = styled.section`
 const titles = {
     h1: {
         'font-size': 'var(--font-size-xxl)',
-        'line-height': '62px',
+        'line-height': '46px',
         'font-weight': '600'
     },
     h2: {
         'font-size': 'var(--font-size-xl)',
-        'line-height': '46px',
+        'line-height': '28px',
         'font-weight': '600'
     },
     h3: {
         'font-size': 'var(--font-size-lg)',
-        'line-height': '54px',
+        'line-height': '24px',
         'font-weight': '500'
     },
     h4: {
         'font-size': 'var(--font-size-md)',
-        'line-height': '36px',
+        'line-height': '22px',
         'font-weight': '500'
     }
 };

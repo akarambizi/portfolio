@@ -47,7 +47,7 @@ function Card({ data: { name, image, links, tags } }) {
                 <img src={image} alt={name} layout="fill" />
             </StyledCardImageLink>
             <div>
-                <Text bold>{name}</Text>
+                <Text bold="true">{name}</Text>
                 <div>
                     {tags.map((tag) => (
                         <Text key={tag}>{tag}</Text>

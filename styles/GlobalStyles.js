@@ -22,7 +22,13 @@ const GlobalStyles = createGlobalStyle`
         color: var(--primary-text-color);
         font-family: var(--font-primary);
         width: 100%;
-        background: #D8D8D8;
+        word-wrap: break-word;
+
+        ${'' /* background: #D8D8D8; */}
+
+        main {
+            background: violet;
+        }
     }
 
     h1,
