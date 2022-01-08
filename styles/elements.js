@@ -5,17 +5,17 @@ import mixins from './mixins';
 export const StyledWrapper = styled.div`
     /* min-width: 100%; */
     padding: 0 20px;
-    max-width: 1225px;
+    max-width: 1110px;
     margin: 0 auto;
 `;
 
 export const Grid = styled.section`
     display: flex;
     flex-wrap: wrap;
-    display: grid;
     align-items: center;
     gap: 0 30px;
-    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); */
     /* horizontal-card */
     /* grid-template-columns: 1fr 1fr; */
     padding: ${({ spacing }) => spacing && '10px 0'};
