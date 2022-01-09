@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import { mixins, media } from '../styles';
-import { StyledWrapper } from '../styles/elements';
+import { AppContainer } from '../styles/elements';
 
 const StyledHeader = styled.header`
     width: 100%;
 `;
 
-const StyledHeaderWrapper = styled(StyledWrapper)`
+const StyledHeaderWrapper = styled(AppContainer)`
     ${mixins.flexBetween}
     padding-top: 20px;
     padding-bottom: 20px;

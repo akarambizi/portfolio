@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 // import arrowUrl from '../assets/images/icon-angle-down.svg';
-import colors from './colors';
-import fonts from './fonts';
+// import colors from './colors';
+// import fonts from './fonts';
 import normalize from './normalize';
 import media from './media';
 
@@ -9,8 +9,8 @@ const GlobalStyles = createGlobalStyle`
     ${normalize};
 
     :root {
-        ${colors};
-        ${fonts};
+        ${'' /* ${colors};
+        ${fonts}; */}
         font-size: 14px;
 
         ${media.laptop} {
@@ -19,8 +19,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        color: var(--primary-text-color);
-        font-family: var(--font-primary);
+       // color: var(--primary-text-color);
+        //font-family: var(--font-primary);
         width: 100%;
         word-wrap: break-word;
         ${'' /* box-sizing: border-box; */}
@@ -34,18 +34,16 @@ const GlobalStyles = createGlobalStyle`
     h3,
     h4,
     h5,
-    h6 {
-        margin: 0;
-        font-family: var(--font-secondary);
-    }
-
+    h6,
     p {
         margin: 0;
+        //font-family: var(--font-secondary);
     }
+
 
     a {
         text-decoration: none;
-        font-family: var(--font-primary);
+        //font-family: var(--font-primary);
         font-size: 14px;
         letter-spacing: 0px;
         line-height: 14px;
@@ -55,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
 
         &:hover {
             p {
-                color: var(--primary-color-dark);
+                //color: var(--primary-color-dark);
             }
         }
     }
@@ -67,8 +65,8 @@ const GlobalStyles = createGlobalStyle`
 
         li {
             a {
-                color: var(--primary-text-color);
-                font-family: var(--font-secondary);
+                //color: var(--primary-text-color);
+               // font-family: var(--font-secondary);
                 font-size: 14px;
                 letter-spacing: 0px;
                 line-height: 14px;
@@ -77,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
                 transition: all 0.2s ease-in-out;
 
                 &:hover {
-                    color: var(--primary-color);
+                    //color: var(--primary-color);
                 }
             }
         }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { StyledWrapper } from '../styles/elements';
+import { AppContainer } from '../styles/elements';
 
 
 const StyledFooter = styled.footer`
@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 function Footer() {
     return (
         <StyledFooter>
-            <StyledWrapper>
+            <AppContainer>
                 <div>
                     <ul>
                         <li>
@@ -32,7 +32,7 @@ function Footer() {
                 <div>
                     <p>&copy; 2021. Designed and developed by Arthur Karambizi</p>
                 </div>
-            </StyledWrapper>
+            </AppContainer>
         </StyledFooter>
     );
 }

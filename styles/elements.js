@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { media } from '.';
 import mixins from './mixins';
 
-export const StyledWrapper = styled.div`
+export const AppContainer = styled.div`
     /* min-width: 100%; */
     padding: 0 20px;
     max-width: 1110px;
@@ -32,22 +32,22 @@ export const Grid = styled.section`
 
 const titles = {
     h1: {
-        'font-size': 'var(--font-size-xxl)',
+        // 'font-size': 'var(--font-size-xxl)',
         'line-height': '46px',
         'font-weight': '600'
     },
     h2: {
-        'font-size': 'var(--font-size-xl)',
+        // 'font-size': 'var(--font-size-xl)',
         'line-height': '28px',
         'font-weight': '600'
     },
     h3: {
-        'font-size': 'var(--font-size-lg)',
+        // 'font-size': 'var(--font-size-lg)',
         'line-height': '24px',
         'font-weight': '500'
     },
     h4: {
-        'font-size': 'var(--font-size-md)',
+        // 'font-size': 'var(--font-size-md)',
         'line-height': '22px',
         'font-weight': '500'
     }
@@ -65,8 +65,8 @@ export const Text = styled.p`
     display: ${({ display }) => display};
     margin-bottom: 10px;
     width: ${({ width }) => width};
-    color: ${({ secondary }) => (secondary ? 'var(--primary-color)' : 'var(--primary-text-color)')};
-    font-size: ${({ md }) => (md ? 'var(--font-size-md)' : 'var(--font-size-text)')};
+    // color: ${({ secondary }) => (secondary ? 'var(--primary-color)' : 'var(--primary-text-color)')};
+    // font-size: ${({ md }) => (md ? 'var(--font-size-md)' : 'var(--font-size-text)')};
     font-weight: ${({ bold }) => bold && '600'};
     line-height: 28px;
 
@@ -156,6 +156,6 @@ export const Tab = styled.button`
 
 export const ColorBox = styled.div`
     height: 90px;
-    background: ${({ bg }) => `var(--${bg})`};
+    //background: ${({ bg }) => `var(--${bg})`};
     border-radius: 15px;
 `;

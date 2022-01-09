@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media, mixins } from '../styles';
-import { StyledWrapper, Title, Text } from '../styles/elements';
+import { AppContainer, Title, Text } from '../styles/elements';
 
 const StyledHero = styled.section`
     /* background-color: green; */
@@ -31,7 +31,7 @@ const StyledHeroContent = styled.div`
 function Hero() {
     return (
         <StyledHero>
-            <StyledWrapper>
+            <AppContainer>
                 <StyledHeroContent>
                     <Text>Hey,</Text>
                     <Title>
@@ -43,7 +43,7 @@ function Hero() {
                         }
                     </Text>
                 </StyledHeroContent>
-            </StyledWrapper>
+            </AppContainer>
         </StyledHero>
     );
 }

@@ -60,10 +60,10 @@ const StyledCardLinks = styled.div`
     margin-bottom: 10px;
 
     a {
-        color: var(--primary-text-color);
+       // color: var(--primary-text-color);
 
         &:hover {
-            color: var(--primary-color);
+           // color: var(--primary-color);
         }
 
         svg,

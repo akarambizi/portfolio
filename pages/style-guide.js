@@ -1,10 +1,10 @@
-import { Title, Button, StyledWrapper, Grid, Text, ColorBox } from '../styles/elements';
+import { Title, Button, AppContainer, Grid, Text, ColorBox } from '../styles/elements';
 import projects from '../assets/json/projects.json';
 import Card from '../components/Card';
 
 function StyleGuide() {
     return (
-        <StyledWrapper>
+        <AppContainer>
             <section>
                 <Title centered="true">Style Guide</Title>
                 <Grid>
@@ -57,7 +57,7 @@ function StyleGuide() {
                     ))}
                 </Grid>
             </section>
-        </StyledWrapper>
+        </AppContainer>
     );
 }
 
