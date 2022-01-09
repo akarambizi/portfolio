@@ -1,5 +1,5 @@
 import { Title, Button, StyledWrapper, Grid, Text, ColorBox } from '../styles/elements';
-import projects from '../api/projects';
+import projects from '../assets/json/projects.json';
 import Card from '../components/Card';
 
 function StyleGuide() {
@@ -50,10 +50,10 @@ function StyleGuide() {
                 </div>
             </section>
             <section>
-                <Title centered="true">Components</Title>
-                <Grid>
+                <Title centered="true" marginBottom="20px">Components</Title>
+                <Grid columns="2">
                     {projects.map((project) => (
-                        <Card data={project} key={project.name} />
+                        <Card data={project} key={project.name} large />
                     ))}
                 </Grid>
             </section>

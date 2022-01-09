@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media } from '.';
 import mixins from './mixins';
 
@@ -10,14 +10,18 @@ export const StyledWrapper = styled.div`
 `;
 
 export const Grid = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
+    display: grid;
     gap: 0 30px;
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); */
-    /* horizontal-card */
-    /* grid-template-columns: 1fr 1fr; */
+
+    ${({ columns }) => {
+        const size = columns ? 1110 / columns - 30 : 240;
+        const minsize = `min(${size}px, 100%)`;
+        return `
+            grid-template-columns: repeat(auto-fit, minmax(${minsize}, 1fr));
+        `;
+    }};
+
     padding: ${({ spacing }) => spacing && '10px 0'};
 
     ${media.laptop} {
