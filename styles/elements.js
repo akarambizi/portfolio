@@ -1,10 +1,13 @@
 import styled, { css } from 'styled-components';
 import { media } from '.';
 import mixins from './mixins';
+import colors from './variables/colors';
+import fonts from './variables/fonts';
+import sizes from './variables/sizes';
 
 export const AppContainer = styled.div`
     /* min-width: 100%; */
-    padding: 0 20px;
+    padding: 0 ${sizes.xl};
     max-width: 1110px;
     margin: 0 auto;
 `;
@@ -12,20 +15,19 @@ export const AppContainer = styled.div`
 export const Grid = styled.section`
     /* align-items: center; */
     display: grid;
-    gap: 0 30px;
+    gap: ${({ gridGap }) => (gridGap ? gridGap : `0 ${sizes.xxxl}`)};
+    padding: ${({ padding }) => padding && `${sizes.xs} 0`};
 
     ${({ columns }) => {
         const size = columns ? 1110 / columns - 30 : 240;
         const minsize = `min(${size}px, 100%)`;
-        return `
+        return css`
             grid-template-columns: repeat(auto-fit, minmax(${minsize}, 1fr));
         `;
     }};
 
-    padding: ${({ spacing }) => spacing && '10px 0'};
-
     ${media.laptop} {
-        padding: ${({ spacing }) => spacing && '40px 0'};
+        padding: ${({ padding }) => padding && `${sizes.xxxxl} 0`};
         ${({ transition }) => transition && mixins.opacityAnimation}
     }
 `;
@@ -55,36 +57,36 @@ const titles = {
 
 export const Title = styled.h1`
     ${({ as: tag }) => (tag in titles ? titles[tag] : titles['h1'])};
-    margin-bottom: ${({ marginBottom }) => marginBottom || '10px'};
     width: ${({ fullWidth }) => fullWidth && '100%'};
+    margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xs};
     letter-spacing: 0;
     text-align: ${({ centered }) => centered && 'center'};
 `;
 
 export const Text = styled.p`
     display: ${({ display }) => display};
-    margin-bottom: 10px;
     width: ${({ width }) => width};
-    // color: ${({ secondary }) => (secondary ? 'var(--primary-color)' : 'var(--primary-text-color)')};
-    // font-size: ${({ md }) => (md ? 'var(--font-size-md)' : 'var(--font-size-text)')};
+    margin-bottom: ${sizes.xxxs};
+    color: ${({ textColor }) => textColor && textColor};
+    font-size: ${({ fontSize }) => (fontSize ? fontSize : sizes.base)};
     font-weight: ${({ bold }) => bold && '600'};
-    line-height: 28px;
+    line-height: ${sizes.xxl};
 
     ${({ heading, fullWidth, centered, marginBottom, sm }) => {
         return (
             heading &&
-            `
-            margin-bottom: 18px;
-            margin-bottom: ${marginBottom};
-            width: ${fullWidth && '100%'};
-            text-align: ${centered && 'center'};
-            font-size: ${sm ? '14px' : '18px'};
-            font-weight: 700;
-            line-height: 34px;
+            css`
+                margin-bottom: 18px;
+                margin-bottom: ${marginBottom};
+                width: ${fullWidth && '100%'};
+                text-align: ${centered && 'center'};
+                font-size: ${sm ? sizes.sm : sizes.lg};
+                font-weight: 700;
+                line-height: ${sizes.xxxxl};
 
-            ${media.laptop} {
-                font-size: ${sm ? '18px' : '24px'};
-            }
+                ${media.laptop} {
+                    font-size: ${sm ? sizes.lg : sizes.xxl};
+                }
             `
         );
     }};
@@ -100,13 +102,13 @@ export const Button = styled.button`
 `;
 
 export const List = styled.ul`
-    margin-bottom: 20px;
+    margin-bottom: ${sizes.xl};
 `;
 
 export const ListItem = styled.li`
-    font-size: 14px;
+    font-size: ${sizes.sm};
     letter-spacing: 0;
-    line-height: 26px;
+    line-height: ${sizes.xxl};
 
     &::before {
         ${mixins.inlineBlock}
@@ -119,43 +121,8 @@ export const ListItem = styled.li`
     }
 `;
 
-export const Tabs = styled.div`
-    ${mixins.flex}
-    margin: 0 20px 32px;
-    margin-bottom: ${({ marginBottom }) => marginBottom && '20px'};
-    border-bottom: 0.125rem solid #d8d8d8;
-    /* width: 100%; */
-    box-sizing: border-box;
-
-    ${media.laptop} {
-        margin: ${({ centered }) => centered && '0 auto'};
-        max-width: 1240px;
-    }
-`;
-
-export const Tab = styled.button`
-    width: 100%;
-    border: none;
-    border-bottom: ${({ active }) => active && '4px solid #0d9b6e'};
-    padding: ${({ active }) => (active ? '6px 10px' : '8px 10px')};
-    color: #0f2524;
-    background-color: transparent;
-    font-size: 12px;
-    font-weight: 800;
-    line-height: 18px;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: none;
-    transition: border-bottom 0.2s ease;
-
-    ${media.laptop} {
-        padding: ${({ active }) => (active ? '6px 18px' : '8px 18px')};
-        font-size: 14px;
-    }
-`;
-
 export const ColorBox = styled.div`
     height: 90px;
     //background: ${({ bg }) => `var(--${bg})`};
-    border-radius: 15px;
+    border-radius: ${sizes.base};
 `;

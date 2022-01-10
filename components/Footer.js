@@ -4,7 +4,7 @@ import { AppContainer } from '../styles/elements';
 
 
 const StyledFooter = styled.footer`
-    background-color: lightpink;
+    /* background-color: lightpink; */
 `;
 function Footer() {
     return (

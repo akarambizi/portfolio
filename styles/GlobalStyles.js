@@ -4,13 +4,13 @@ import { createGlobalStyle } from 'styled-components';
 // import fonts from './fonts';
 import normalize from './normalize';
 import media from './media';
+import colors from './variables/colors';
+import fonts from './variables/fonts';
 
 const GlobalStyles = createGlobalStyle`
     ${normalize};
 
     :root {
-        ${'' /* ${colors};
-        ${fonts}; */}
         font-size: 14px;
 
         ${media.laptop} {
@@ -19,13 +19,10 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-       // color: var(--primary-text-color);
-        //font-family: var(--font-primary);
         width: 100%;
+        font-family: ${fonts.primary};
+        color: ${colors.text};
         word-wrap: break-word;
-        ${'' /* box-sizing: border-box; */}
-        ${'' /* overflow-x: hidden;
-        overflow-y: scroll; */}
         overflow: auto;
     }
 
@@ -37,24 +34,21 @@ const GlobalStyles = createGlobalStyle`
     h6,
     p {
         margin: 0;
-        //font-family: var(--font-secondary);
     }
 
 
     a {
         text-decoration: none;
-        //font-family: var(--font-primary);
         font-size: 14px;
         letter-spacing: 0px;
         line-height: 14px;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
         display: inline-block;
+        color: ${colors.dark};
 
         &:hover {
-            p {
-                //color: var(--primary-color-dark);
-            }
+            color: ${colors.primaryHover};
         }
     }
 
@@ -65,18 +59,12 @@ const GlobalStyles = createGlobalStyle`
 
         li {
             a {
-                //color: var(--primary-text-color);
-               // font-family: var(--font-secondary);
                 font-size: 14px;
                 letter-spacing: 0px;
                 line-height: 14px;
                 padding: 10px;
                 text-decoration: none;
                 transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    //color: var(--primary-color);
-                }
             }
         }
     }

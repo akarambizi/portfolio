@@ -2,25 +2,21 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { GithubIcon, ExternalLink } from '../assets/images';
 import { Text } from '../styles/elements';
-import { media, mixins } from '../styles';
+import { media, mixins, sizes, colors } from '../styles';
 
 const StyledCard = styled.article`
-    padding-bottom: 20px;
+    padding-bottom: ${sizes.xl};
 
     ul {
         ${mixins.flex}
-        gap: 0 20px;
+        gap: 0 ${sizes.xl};
     }
 `;
 
 const StyledCardImage = styled.a`
     position: relative;
     display: block;
-    margin-bottom: 15px;
-
-    ${media.laptop} {
-        margin-bottom: 20px;
-    }
+    margin-bottom: ${sizes.base};
 
     &::after {
         content: '';
@@ -29,8 +25,8 @@ const StyledCardImage = styled.a`
         left: -3px;
         height: calc(100% - 4px);
         width: 100%;
-        border: 3px solid var(--primary-color);
-        border-radius: 27px;
+        border: 3px solid ${colors.primary};
+        border-radius: calc(${sizes.base} - 3px);
         opacity: 0;
         transition: opacity 0.2s ease-out;
         pointer-events: none;
@@ -48,7 +44,7 @@ const StyledCardImage = styled.a`
         display: block;
         width: 100%;
         height: ${({ large }) => (large ? '620px' : '380px')};
-        border-radius: 25px;
+        border-radius: ${sizes.xs};
         cursor: pointer;
         object-fit: cover;
     }
@@ -56,25 +52,19 @@ const StyledCardImage = styled.a`
 
 const StyledCardLinks = styled.div`
     ${mixins.flex}
-    gap: 0 50px;
-    margin-bottom: 10px;
+    gap: 0 ${sizes.xxxxl};
+    margin-bottom: ${sizes.xxs};
 
     a {
-       // color: var(--primary-text-color);
-
-        &:hover {
-           // color: var(--primary-color);
-        }
-
         svg,
         span {
             ${mixins.inlineBlock}
         }
 
         svg {
-            width: 18px;
-            height: 18px;
-            margin-right: 12px;
+            width: ${sizes.lg};
+            height: ${sizes.lg};
+            margin-right: ${sizes.xs};
         }
     }
 `;
@@ -89,6 +79,14 @@ function Card({ data: { name, image, links, tags }, large }) {
                 <Text bold md>
                     {name}
                 </Text>
+
+                <ul>
+                    {tags.map((tag) => (
+                        <li key={tag}>
+                            <Text fontSize={sizes.xs}>{tag}</Text>
+                        </li>
+                    ))}
+                </ul>
                 <StyledCardLinks>
                     <a href={links.github}>
                         <GithubIcon />
@@ -99,13 +97,6 @@ function Card({ data: { name, image, links, tags }, large }) {
                         <span>Live Preview</span>
                     </a>
                 </StyledCardLinks>
-                <ul>
-                    {tags.map((tag) => (
-                        <li key={tag}>
-                            <Text>{tag}</Text>
-                        </li>
-                    ))}
-                </ul>
             </div>
         </StyledCard>
     );

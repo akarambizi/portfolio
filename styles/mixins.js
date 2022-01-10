@@ -1,11 +1,13 @@
 import { css, keyframes } from 'styled-components';
+import colors from './variables/colors';
+import fonts from './variables/fonts';
+import sizes from './variables/sizes';
 
 const mixins = {
     flex: css`
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 30px;
     `,
 
     flexCenter: css`
@@ -72,24 +74,23 @@ const mixins = {
 
     button: css`
         display: ${({ inlineBlock }) => (inlineBlock ? 'inline-block' : 'block')};
-       // border: 2px solid var(--primary-color);
-        padding: 14px 20px;
         width: ${({ width }) => width};
         min-width: 142px;
-        border-radius: 5px;
-       // color: ${({ secondary }) => (secondary ? 'var(--primary-text-color)' : 'var(--primary-color-text)')};
-       // background: ${({ secondary }) => (secondary ? 'var(--primary-color-text)' : 'var(--primary-color)')};
-        cursor: pointer;
-       // font-size: var(--font-size-sm);
-        line-height: 16px;
-        text-transform: capitalize;
+        padding: ${sizes.sm} ${sizes.xl};
+        border: 2px solid ${colors.primary};
+        border-radius: calc(${sizes.xs} / 2);
+        color: ${({ secondary }) => (secondary ? colors.secondary : colors.text)};
+        background: ${({ secondary }) => (secondary ? colors.secondaryActive : colors.primary)};
+        font-size: ${sizes.base};
         text-align: center;
+        text-transform: capitalize;
+        line-height:  ${sizes.base};
         transition: all 0.3s ease;
+        cursor: pointer;
 
         &:hover {
-           // background: var(--primary-color-light);
-           // border: 2px solid var(--primary-color-light);
-           // color: var(--primary-text-color);
+            border: 2px solid ${colors.primaryHover};
+            background: ${colors.primaryHover};
         }
     `,
 

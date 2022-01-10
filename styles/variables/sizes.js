@@ -1,4 +1,6 @@
-const spacing = {
+const sizes = {
+    xxxs: '8px',
+    xxs: '10px',
     xs: '12px',
     sm: '14px',
     base: '16px',
@@ -9,4 +11,4 @@ const spacing = {
     xxxxl: '36px'
 };
 
-export default spacing;
+export default sizes;
