@@ -66,22 +66,21 @@ export const Title = styled.h1`
 export const Text = styled.p`
     display: ${({ display }) => display};
     width: ${({ width }) => width};
-    margin-bottom: ${sizes.xxxs};
+    margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xxxs};
     color: ${({ textColor }) => textColor && textColor};
     font-size: ${({ fontSize }) => (fontSize ? fontSize : sizes.base)};
     font-weight: ${({ bold }) => bold && '600'};
-    line-height: ${sizes.xxl};
+    line-height: ${sizes.xxxl};
 
     ${({ heading, fullWidth, centered, marginBottom, sm }) => {
         return (
             heading &&
             css`
-                margin-bottom: 18px;
-                margin-bottom: ${marginBottom};
                 width: ${fullWidth && '100%'};
-                text-align: ${centered && 'center'};
+                margin-bottom: ${marginBottom || sizes.lg};
                 font-size: ${sm ? sizes.sm : sizes.lg};
                 font-weight: 700;
+                text-align: ${centered && 'center'};
                 line-height: ${sizes.xxxxl};
 
                 ${media.laptop} {

@@ -1,8 +1,8 @@
 export const colors = {
     // primary
     primary: '#94DFE6',
-    primaryActive: '#86BBC8',
-    primaryHover: '#8CA3AB',
+    primaryActive: '#8CA3AB',
+    primaryHover: '#86BBC8',
     // secondary
     secondary: '#E1CCF0',
     secondaryActive: '#AC95F2',
@@ -10,7 +10,8 @@ export const colors = {
     // text
     text: '#1C1C1C',
     dark: '#2F2F2F',
-    light: '#F9F7F8'
+    light: '#F9F7F8',
+    white: '#FFFFFF'
 };
 
 export default colors;

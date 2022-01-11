@@ -79,23 +79,28 @@ const mixins = {
         padding: ${sizes.sm} ${sizes.xl};
         border: 2px solid ${colors.primary};
         border-radius: calc(${sizes.xs} / 2);
-        color: ${({ secondary }) => (secondary ? colors.secondary : colors.text)};
+        color: ${({ secondary }) => (secondary ? colors.secondary : colors.white)};
         background: ${({ secondary }) => (secondary ? colors.secondaryActive : colors.primary)};
         font-size: ${sizes.base};
         text-align: center;
         text-transform: capitalize;
-        line-height:  ${sizes.base};
+        line-height: ${sizes.base};
         transition: all 0.3s ease;
         cursor: pointer;
 
         &:hover {
             border: 2px solid ${colors.primaryHover};
             background: ${colors.primaryHover};
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
     `,
-
     boxShadow: css`
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    `,
+    floating: keyframes`
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 10px); }
+        100%   { transform: translate(0, -0px); }
     `
 };
 

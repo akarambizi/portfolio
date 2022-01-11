@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
         color: ${colors.text};
         word-wrap: break-word;
         overflow: auto;
+        background-color: ${colors.light};
     }
 
     h1,
