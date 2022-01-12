@@ -9,34 +9,29 @@ const mixins = {
         flex-wrap: wrap;
         align-items: center;
     `,
-
     flexCenter: css`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     `,
-
     flexBetween: css`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
     `,
-
     flexColumn: css`
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     `,
-
     flexColumnCenter: css`
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
     `,
-
     flexAlignCenter: css`
         display: flex;
         flex-direction: column;
@@ -71,7 +66,12 @@ const mixins = {
         width: 100%;
         z-index: 100;
     `,
-
+    positionBottom: css`
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    `,
     button: css`
         display: ${({ inlineBlock }) => (inlineBlock ? 'inline-block' : 'block')};
         width: ${({ width }) => width};

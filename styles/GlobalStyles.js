@@ -1,30 +1,37 @@
 import { createGlobalStyle } from 'styled-components';
-// import arrowUrl from '../assets/images/icon-angle-down.svg';
-// import colors from './colors';
-// import fonts from './fonts';
 import normalize from './normalize';
 import media from './media';
 import colors from './variables/colors';
 import fonts from './variables/fonts';
+import sizes from './variables/sizes';
 
 const GlobalStyles = createGlobalStyle`
     ${normalize};
 
     :root {
-        font-size: 14px;
+        font-size: ${sizes.sm};
+        height: 100%;
 
         ${media.laptop} {
-            font-size: 16px;
+            font-size: ${sizes.base};
         }
     }
 
     body {
+        height: 100%;
         width: 100%;
-        font-family: ${fonts.primary};
         color: ${colors.text};
-        word-wrap: break-word;
-        overflow: auto;
+        font-family: ${fonts.primary};
         background-color: ${colors.light};
+        overflow: auto;
+        word-wrap: break-word;
+
+        #__next {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
     }
 
     h1,
