@@ -7,7 +7,7 @@ export default function ProjectList() {
     return (
         <Grid columns="2" gridGap="36px">
             {projects.map((project) => (
-            <Card data={project} key={project.id} large />
+        <Card data={project} key={project.id} large />
             ))}
         </Grid>
     );
