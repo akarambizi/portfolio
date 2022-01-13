@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "eslint": "eslint ./ --ext js,jsx,ts,tsx"
+        "eslint": "eslint ./ --ext js,jsx,ts,tsx",
+        "eslint:fix": "eslint --fix --ext .js,.jsx ."
     },
     "dependencies": {
         "next": "11.0.1",
@@ -27,7 +28,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "pretty-quick --staged && npm run eslint"
+            "pre-commit": "pretty-quick --staged && npm run eslint:fix"
         }
     }
 }
