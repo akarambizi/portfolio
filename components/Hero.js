@@ -5,15 +5,12 @@ import { AppContainer, Title, Text, Button, Grid } from '../styles/elements';
 import { media, mixins, colors, sizes } from '../styles';
 
 const StyledHero = styled.section`
+    ${mixins.flex}
     width: 100%;
+    min-height: calc(100vh - 110px);
+    margin-bottom: ${sizes.xxxxl};
     padding: ${sizes.xxxxl} 0;
     box-sizing: border-box;
-    margin-bottom: ${sizes.xxxxl};
-
-    ${media.mobile} {
-        ${mixins.flex}
-        min-height: calc(100vh - 110px);
-    }
 
     ${AppContainer} {
         position: relative;
