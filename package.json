@@ -10,7 +10,8 @@
         "lint": "next lint",
         "eslint": "eslint ./ --ext js,jsx,ts,tsx",
         "eslint:fix": "eslint --fix --ext .js,.jsx .",
-        "pretty-quick": "pretty-quick"
+        "pretty-quick": "pretty-quick",
+        "prepare": "husky install"
     },
     "dependencies": {
         "next": "11.0.1",
