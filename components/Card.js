@@ -1,11 +1,19 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { GithubIcon, ExternalLink } from '../assets/images';
 import { Text } from '../styles/elements';
 import { media, mixins, sizes, colors } from '../styles';
 
 const StyledCard = styled.article`
     padding-bottom: ${sizes.xl};
+    ${mixins.boxShadow}
+    padding: 10px;
+    border-radius: 8px;
+    transition: all .2s ease;
+
+    &:hover {
+        ${mixins.boxShadowHover}
+    }
 
     ul {
         ${mixins.flex}
@@ -43,10 +51,21 @@ const StyledCardImage = styled.a`
     img {
         display: block;
         width: 100%;
-        height: ${({ large }) => (large ? '620px' : '380px')};
+        height: 380px;
         border-radius: ${sizes.xs};
         cursor: pointer;
         object-fit: cover;
+
+        ${({ large }) => {
+            return (
+                large &&
+                css`
+                    ${media.laptop} {
+                        height: 520px;
+                    }
+                `
+            );
+        }};
     }
 `;
 
@@ -76,10 +95,9 @@ function Card({ data: { name, image, links, tags }, large }) {
                 <img src={image} alt={name} layout="fill" />
             </StyledCardImage>
             <div>
-                <Text bold md>
+                <Text bold md marginBottom="0">
                     {name}
                 </Text>
-
                 <ul>
                     {tags.map((tag) => (
                         <li key={tag}>

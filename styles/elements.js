@@ -32,35 +32,14 @@ export const Grid = styled.section`
     }
 `;
 
-const titles = {
-    h1: {
-        // 'font-size': 'var(--font-size-xxl)',
-        'line-height': '46px',
-        'font-weight': '600'
-    },
-    h2: {
-        // 'font-size': 'var(--font-size-xl)',
-        'line-height': '28px',
-        'font-weight': '600'
-    },
-    h3: {
-        // 'font-size': 'var(--font-size-lg)',
-        'line-height': '24px',
-        'font-weight': '500'
-    },
-    h4: {
-        // 'font-size': 'var(--font-size-md)',
-        'line-height': '22px',
-        'font-weight': '500'
-    }
-};
-
 export const Title = styled.h1`
-    ${({ as: tag }) => (tag in titles ? titles[tag] : titles['h1'])};
     width: ${({ fullWidth }) => fullWidth && '100%'};
     margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xs};
     letter-spacing: 0;
     text-align: ${({ centered }) => centered && 'center'};
+    font-size: ${({ fontSize }) => fontSize || sizes.xxxl};
+    font-weight: ${({ fontWeight }) => fontWeight || '600'};
+    line-height: ${({ lineHeight }) => lineHeight || '46px'};
 `;
 
 export const Text = styled.p`

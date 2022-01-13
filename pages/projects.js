@@ -1,7 +1,12 @@
-
 import Head from 'next/head';
-import { Header, Footer} from '../components';
+import styled from 'styled-components';
+import { Bubbles } from '../assets/images';
+import { Header, Footer, ProjectList, PageTitle } from '../components';
+import { AppContainer, Title } from '../styles/elements';
 
+const StyledProjects = styled.main`
+    padding: 32px 0;
+`
 function Projects() {
     return (
         <>
@@ -11,10 +16,15 @@ function Projects() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <p>projects</p>
+            <StyledProjects>
+                <AppContainer>
+                    <PageTitle title="Projects." />
+                    <ProjectList />
+                </AppContainer>
+            </StyledProjects>
             <Footer />
         </>
-    )
+    );
 }
 
-export default Projects
+export default Projects;
