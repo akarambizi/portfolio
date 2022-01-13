@@ -1,6 +1,5 @@
 import { css, keyframes } from 'styled-components';
 import colors from './variables/colors';
-import fonts from './variables/fonts';
 import sizes from './variables/sizes';
 
 const mixins = {

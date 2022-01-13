@@ -1,15 +1,14 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import { GithubIcon, ExternalLink } from '../assets/images';
 import { Text } from '../styles/elements';
 import { media, mixins, sizes, colors } from '../styles';
 
 const StyledCard = styled.article`
-    padding-bottom: ${sizes.xl};
-    ${mixins.boxShadow}
-    padding: 10px;
+    padding: ${sizes.xxs};
     border-radius: 8px;
     transition: all .2s ease;
+    ${mixins.boxShadow}
 
     &:hover {
         ${mixins.boxShadowHover}

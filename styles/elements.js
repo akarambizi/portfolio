@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 import { media } from '.';
 import mixins from './mixins';
-import colors from './variables/colors';
-import fonts from './variables/fonts';
 import sizes from './variables/sizes';
 
 export const AppContainer = styled.div`

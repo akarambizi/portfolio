@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Bubbles, ShapeIcon } from '../assets/images';
 
-import { AppContainer, Title, Text, Button, Grid } from '../styles/elements';
+import { AppContainer, Title, Text, Button } from '../styles/elements';
 import { media, mixins, colors, sizes } from '../styles';
 
 const StyledHero = styled.section`

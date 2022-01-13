@@ -1,34 +1,32 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { mixins, media } from '../styles';
+import { mixins, sizes } from '../styles';
 import { AppContainer } from '../styles/elements';
 
 const StyledHeader = styled.header`
     width: 100%;
-`;
+    padding: ${sizes.xl} 0;
 
-const StyledHeaderWrapper = styled(AppContainer)`
-    ${mixins.flexBetween}
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* background-color: lightblue; */
+    ${AppContainer} {
+        ${mixins.flexBetween}
 
-    ul {
-        ${mixins.flex}
+        ul {
+            ${mixins.flex}
+        }
     }
 `;
 
 const StyledLogo = styled.div`
     a {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: ${sizes.xxl};
+        font-weight: 700;
     }
 `;
 
 function Header() {
     return (
         <StyledHeader>
-            <StyledHeaderWrapper>
+            <AppContainer>
                 <StyledLogo>
                     <Link href="/">Ak</Link>
                 </StyledLogo>
@@ -40,7 +38,7 @@ function Header() {
                         <Link href="/projects">Projects</Link>
                     </li>
                 </ul>
-            </StyledHeaderWrapper>
+            </AppContainer>
         </StyledHeader>
     );
 }

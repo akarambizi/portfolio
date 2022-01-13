@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Bubbles } from '../assets/images';
 import { Header, Footer, ProjectList, PageTitle } from '../components';
-import { AppContainer, Title } from '../styles/elements';
+import { AppContainer} from '../styles/elements';
 
 const StyledProjects = styled.main`
     padding: 32px 0;
