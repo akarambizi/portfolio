@@ -69,10 +69,7 @@ function Hero() {
                     <Title>
                         I’m <span>Arthur Karambizi.</span> a Software Engineer.
                     </Title>
-                    <Text marginBottom={sizes.xxxxl}>
-                        I am a software engineer with an interest in building the most effective websites possible. For over a year, I&#39;ve learned about the fundamentals of programming and web
-                        development.
-                    </Text>
+                    <Text marginBottom={sizes.xxxxl}>I am a software engineer with an interest in building the most effective websites possible. For over a year, I&#39;ve learned about the fundamentals of programming and web development.</Text>
                     <Button secondary>Projects</Button>
                     <Bubbles />
                 </StyledHeroContent>
