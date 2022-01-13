@@ -13,7 +13,7 @@ export const AppContainer = styled.div`
 export const Grid = styled.section`
     /* align-items: center; */
     display: grid;
-    gap: ${({ gridGap }) => (gridGap ? gridGap : `0 ${sizes.xxxl}`)};
+    gap: ${({ gridGap }) => (gridGap || `0 ${sizes.xxxl}`)};
     padding: ${({ padding }) => padding && `${sizes.xs} 0`};
 
     ${({ columns }) => {
@@ -45,13 +45,12 @@ export const Text = styled.p`
     width: ${({ width }) => width};
     margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xxxs};
     color: ${({ textColor }) => textColor && textColor};
-    font-size: ${({ fontSize }) => (fontSize ? fontSize : sizes.base)};
+    font-size: ${({ fontSize }) => (fontSize || sizes.base)};
     font-weight: ${({ bold }) => bold && '600'};
     line-height: ${sizes.xxxl};
 
-    ${({ heading, fullWidth, centered, marginBottom, sm }) => {
-        return (
-            heading &&
+    ${({ heading, fullWidth, centered, marginBottom, sm }) => (
+        heading &&
             css`
                 width: ${fullWidth && '100%'};
                 margin-bottom: ${marginBottom || sizes.lg};
@@ -64,8 +63,7 @@ export const Text = styled.p`
                     font-size: ${sm ? sizes.lg : sizes.xxl};
                 }
             `
-        );
-    }};
+    )};
 `;
 
 export const Anchor = styled.a`

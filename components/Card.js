@@ -55,16 +55,14 @@ const StyledCardImage = styled.a`
         cursor: pointer;
         object-fit: cover;
 
-        ${({ large }) => {
-            return (
-                large &&
+        ${({ large }) => (
+        large &&
                 css`
                     ${media.laptop} {
                         height: 520px;
                     }
                 `
-            );
-        }};
+    )};
     }
 `;
 

@@ -1,4 +1,5 @@
 import { GlobalStyles } from '../styles';
+
 function MyApp({ Component, pageProps }) {
     return (
         <>

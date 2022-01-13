@@ -23,20 +23,20 @@ function StyleGuide() {
                             <Text bold="true">Colors</Text>
                             <span>Primary Color</span>
                             <Grid>
-                                <ColorBox bg="primary-color"></ColorBox>
-                                <ColorBox bg="primary-text-color"></ColorBox>
-                                <ColorBox bg="primary-color-dark"></ColorBox>
-                                <ColorBox bg="primary-color-light"></ColorBox>
-                                <ColorBox bg="primary-color-text"></ColorBox>
+                                <ColorBox bg="primary-color" />
+                                <ColorBox bg="primary-text-color" />
+                                <ColorBox bg="primary-color-dark" />
+                                <ColorBox bg="primary-color-light" />
+                                <ColorBox bg="primary-color-text" />
                             </Grid>
                         </div>
                         <div>
                             <Text bold="true">Tertiary Color</Text>
                             <Grid>
-                                <ColorBox bg="secondary-text-color"></ColorBox>
-                                <ColorBox bg="secondary-text-color-light"></ColorBox>
-                                <ColorBox bg="accent-color"></ColorBox>
-                                <ColorBox bg="divider-color"></ColorBox>
+                                <ColorBox bg="secondary-text-color" />
+                                <ColorBox bg="secondary-text-color-light" />
+                                <ColorBox bg="accent-color" />
+                                <ColorBox bg="divider-color" />
                             </Grid>
                         </div>
                     </div>
