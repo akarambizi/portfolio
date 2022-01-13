@@ -9,7 +9,9 @@
         "start": "next start",
         "lint": "next lint",
         "eslint": "eslint ./ --ext js,jsx,ts,tsx",
-        "eslint:fix": "eslint --fix --ext .js,.jsx ."
+        "eslint:fix": "eslint --fix --ext .js,.jsx .",
+        "prepare": "husky install",
+        "precommit": "lint-staged"
     },
     "dependencies": {
         "next": "11.0.1",
@@ -27,13 +29,16 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.28.0",
-        "husky": "^4.3.8",
+        "husky": "^6.0.0",
+        "lint-staged": "^12.1.7",
         "prettier": "^2.5.1"
     },
-    "husky": {
-        "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-        "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-        "post-applypatch": "echo \"[Husky] post-applypatch\"",
-        "pre-commit": "echo \"[Husky] pre-commit\""
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix"
+        ],
+        "*.{html,js}": [
+            "prettier --write"
+        ]
     }
 }
