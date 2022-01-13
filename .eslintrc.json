@@ -23,6 +23,10 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        // Indent with 4 spaces
+        "indent": ["error", 4],
+        // Indent JSX with 4 spaces
+        "react/jsx-indent": ["error", 4]
     }
 }
