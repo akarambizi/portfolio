@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import { Header, Footer, About } from '../components';
 
@@ -11,10 +10,12 @@ function about() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <About />
+            <main>
+                <About />
+            </main>
             <Footer />
         </>
-    )
+    );
 }
 
-export default about
+export default about;

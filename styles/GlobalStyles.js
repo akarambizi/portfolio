@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     :root {
         font-size: ${sizes.sm};
         height: 100%;
+        scroll-behavior: smooth;
 
         ${media.laptop} {
             font-size: ${sizes.base};
@@ -40,7 +41,8 @@ const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6,
-    p {
+    p,
+    figure {
         margin: 0;
     }
 

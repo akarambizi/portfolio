@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header, Footer, Hero } from '../components';
+import { Header, Footer, Hero, About } from '../components';
 
 export default function Home() {
     return (
