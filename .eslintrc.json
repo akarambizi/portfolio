@@ -20,6 +20,8 @@
         // Indent with 4 spaces
         "indent": ["error", 4],
         // Indent JSX with 4 spaces
-        "react/jsx-indent": ["error", 4]
+        "react/jsx-indent": ["error", 4],
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+
     }
 }

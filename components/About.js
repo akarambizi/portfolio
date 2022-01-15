@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageTitle } from '.';
+import PageTitle from './PageTitle';
 import { EmailIcon, GithubIcon, LinkedinIcon } from '../assets/images';
 import { AppContainer } from '../styles/elements';
 
