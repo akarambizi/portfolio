@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import projects from '../assets/json/projects.json';
-import { Header, Footer, ProjectList, PageTitle } from '../components';
 import { AppContainer } from '../styles/elements';
+import { Header, Footer, ProjectList, PageTitle } from '../components';
+import projects from '../assets/json/projects.json';
 
 const StyledProjects = styled.main`
     padding: 32px 0;

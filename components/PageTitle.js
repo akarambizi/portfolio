@@ -1,10 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Bubbles } from '../assets/images';
 import { mixins, sizes } from '../styles';
 import { Title } from '../styles/elements';
-// import { Bubbles } from '../../assets/images';
-// import { Title } from '../../styles/elements';
 
 const StyledPageTitle = styled.div`
     padding: ${sizes.base} 0;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { AppContainer, Text } from '../styles/elements';
-import { EmailIcon, GithubIcon, LinkedinIcon } from '../assets/images';
 import { colors, mixins, sizes } from '../styles';
+import { EmailIcon, GithubIcon, LinkedinIcon } from '../assets/images';
 
 const StyledFooter = styled.footer`
     text-align: center;

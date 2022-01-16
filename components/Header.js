@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { mixins, sizes } from '../styles';
 import { AppContainer } from '../styles/elements';
+import { mixins, sizes } from '../styles';
 
 const StyledHeader = styled.header`
     width: 100%;
