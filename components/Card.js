@@ -7,7 +7,7 @@ import { media, mixins, sizes, colors } from '../styles';
 const StyledCard = styled.article`
     padding: ${sizes.xxs};
     border-radius: 8px;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     ${mixins.boxShadow}
 
     &:hover {
@@ -50,19 +50,19 @@ const StyledCardImage = styled.a`
     img {
         display: block;
         width: 100%;
-        height: 380px;
+        height: 280px;
         border-radius: ${sizes.xs};
         cursor: pointer;
         object-fit: cover;
 
-        ${({ large }) => (
-        large &&
-                css`
-                    ${media.laptop} {
-                        height: 520px;
-                    }
-                `
-    )};
+        ${({ large }) =>
+            large &&
+            css`
+                height: 380px;
+                ${media.laptop} {
+                    height: 520px;
+                }
+            `};
     }
 `;
 

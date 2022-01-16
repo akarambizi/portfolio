@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import projects from '../assets/json/projects.json';
 import { Header, Footer, ProjectList, PageTitle } from '../components';
-import { AppContainer} from '../styles/elements';
+import { AppContainer } from '../styles/elements';
 
 const StyledProjects = styled.main`
     padding: 32px 0;
-`
+`;
 function Projects() {
     return (
         <>
@@ -18,7 +19,7 @@ function Projects() {
             <StyledProjects>
                 <AppContainer>
                     <PageTitle title="Projects." />
-                    <ProjectList />
+                    <ProjectList projects={projects} GridColumns="2" haslargeCard />
                 </AppContainer>
             </StyledProjects>
             <Footer />

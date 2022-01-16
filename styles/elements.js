@@ -13,8 +13,13 @@ export const AppContainer = styled.div`
 export const Grid = styled.section`
     /* align-items: center; */
     display: grid;
-    gap: ${({ gridGap }) => (gridGap || `0 ${sizes.xxxl}`)};
+    gap: ${({ gridGap }) => gridGap || `0 ${sizes.xxxl}`};
     padding: ${({ padding }) => padding && `${sizes.xs} 0`};
+
+    ${media.laptop} {
+        padding: ${({ padding }) => padding && `${sizes.xxxxl} 0`};
+        ${({ transition }) => transition && mixins.opacityAnimation}
+    }
 
     ${({ columns }) => {
         const size = columns ? 1110 / columns - 30 : 240;
@@ -23,11 +28,6 @@ export const Grid = styled.section`
             grid-template-columns: repeat(auto-fit, minmax(${minsize}, 1fr));
         `;
     }};
-
-    ${media.laptop} {
-        padding: ${({ padding }) => padding && `${sizes.xxxxl} 0`};
-        ${({ transition }) => transition && mixins.opacityAnimation}
-    }
 `;
 
 export const Title = styled.h1`
@@ -45,25 +45,24 @@ export const Text = styled.p`
     width: ${({ width }) => width};
     margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xxxs};
     color: ${({ textColor }) => textColor && textColor};
-    font-size: ${({ fontSize }) => (fontSize || sizes.base)};
+    font-size: ${({ fontSize }) => fontSize || sizes.base};
     font-weight: ${({ bold }) => bold && '600'};
     line-height: ${sizes.xxxl};
 
-    ${({ heading, fullWidth, centered, marginBottom, sm }) => (
+    ${({ heading, fullWidth, centered, marginBottom, small }) =>
         heading &&
-            css`
-                width: ${fullWidth && '100%'};
-                margin-bottom: ${marginBottom || sizes.lg};
-                font-size: ${sm ? sizes.sm : sizes.lg};
-                font-weight: 700;
-                text-align: ${centered && 'center'};
-                line-height: ${sizes.xxxxl};
+        css`
+            width: ${fullWidth && '100%'};
+            margin-bottom: ${marginBottom || sizes.lg};
+            font-size: ${small ? sizes.sm : sizes.lg};
+            font-weight: 700;
+            text-align: ${centered && 'center'};
+            line-height: ${sizes.xxxxl};
 
-                ${media.laptop} {
-                    font-size: ${sm ? sizes.lg : sizes.xxl};
-                }
-            `
-    )};
+            ${media.laptop} {
+                font-size: ${small ? sizes.lg : sizes.xxl};
+            }
+        `};
 `;
 
 export const Anchor = styled.a`
