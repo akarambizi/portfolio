@@ -56,7 +56,7 @@ const StyledCardImage = styled.a`
         object-fit: cover;
 
         ${({ large }) =>
-            large &&
+        large &&
             css`
                 height: 380px;
                 ${media.laptop} {
