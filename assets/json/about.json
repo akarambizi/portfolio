@@ -1,0 +1,36 @@
+{
+    "languages": [
+        "Javascript",
+        "HTML",
+        "CSS/SCSS",
+        "Python",
+        "PHP"
+    ],
+    "libraries": [
+        "React.js",
+        "Vue.js",
+        "jQuery",
+        "Node.js",
+        "Express.js",
+        "Next.js"
+    ],
+    "tools": [
+        "Git",
+        "Gulp.js",
+        "Webpack",
+        "Wordpress"
+    ],
+    "design": [
+        "Sketch",
+        "InVision",
+        "Figma"
+    ],
+    "interests": [
+        "Sports",
+        "Music",
+        "Sciences",
+        "Technology",
+        "Travel",
+        "Nature"
+    ]
+}

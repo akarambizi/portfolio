@@ -16,7 +16,7 @@ const StyledCard = styled.article`
 
     ul {
         ${mixins.flex}
-        gap: 0 ${sizes.xl};
+        gap: 0 ${sizes.lg};
     }
 `;
 
@@ -60,7 +60,7 @@ const StyledCardImage = styled.a`
             css`
                 height: 380px;
                 ${media.laptop} {
-                    height: 520px;
+                    height: 420px;
                 }
             `};
     }

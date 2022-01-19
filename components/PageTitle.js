@@ -4,7 +4,7 @@ import { mixins, sizes } from '../styles';
 import { Title } from '../styles/elements';
 
 const StyledPageTitle = styled.div`
-    padding: ${sizes.base} 0;
+    padding: ${sizes.xxxxl} 0;
 
     ${Title} {
         position: relative;
@@ -25,7 +25,7 @@ const StyledPageTitle = styled.div`
 export default function PageTitle({ title }) {
     return (
         <StyledPageTitle>
-            <Title fontSize="38px" marginBottom="32px">
+            <Title fontSize="38px" marginBottom="16px">
                 <span>{title}</span>
                 <Bubbles />
             </Title>

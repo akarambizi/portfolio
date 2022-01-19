@@ -8,13 +8,15 @@ import projects from '../assets/json/projects.json';
 export default function About() {
     return (
         <AppContainer id="about">
-            <article>
-                <PageTitle title="About Me." />
-                <AboutCard />
-                <Text fontSize={sizes.xxl}>Some Projects I Have Built:</Text>
-                <ProjectList projects={projects.slice(0, 3)} GridColumns="3" />
+            <PageTitle title="About Me." />
+            <AboutCard />
+            <div>
+                <Text marginBottom={sizes.xxl} fontSize={sizes.xxl}>
+                    Some Projects I Have Built:
+                </Text>
+                <ProjectList projects={projects.slice(0, 3)} GridColumns="2" haslargeCard />
                 <Button>View All Projects</Button>
-            </article>
+            </div>
         </AppContainer>
     );
 }

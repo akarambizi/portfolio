@@ -19,7 +19,7 @@ function Projects() {
             <StyledProjects>
                 <AppContainer>
                     <PageTitle title="Projects." />
-                    <ProjectList projects={projects} GridColumns="2" haslargeCard />
+                    <ProjectList projects={projects} GridColumns="3" />
                 </AppContainer>
             </StyledProjects>
             <Footer />

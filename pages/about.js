@@ -1,6 +1,10 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 import { Header, Footer, About } from '../components';
 
+const StyledAbout = styled.main`
+    padding: 32px 0;
+`;
 function about() {
     return (
         <>
@@ -10,9 +14,9 @@ function about() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <main>
+            <StyledAbout>
                 <About />
-            </main>
+            </StyledAbout>
             <Footer />
         </>
     );
