@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header, Footer, About } from '../components';
 
 const StyledAbout = styled.main`
-    padding: 32px 0;
+    padding: 32px 0 80px 0;
 `;
 function about() {
     return (

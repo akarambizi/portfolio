@@ -1,7 +1,7 @@
 import AboutCard from './AboutCard';
 import PageTitle from './PageTitle';
 import ProjectList from './ProjectList';
-import { AppContainer, Button, Text } from '../styles/elements';
+import { AppContainer, Text } from '../styles/elements';
 import { sizes } from '../styles';
 import projects from '../assets/json/projects.json';
 
@@ -15,7 +15,6 @@ export default function About() {
                     Some Projects I Have Built:
                 </Text>
                 <ProjectList projects={projects.slice(0, 3)} GridColumns="2" haslargeCard />
-                <Button>View All Projects</Button>
             </div>
         </AppContainer>
     );

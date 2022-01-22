@@ -6,9 +6,6 @@ import about from '../assets/json/about.json';
 
 const StyledAboutCard = styled.section`
     margin-bottom: ${sizes.xxxxl};
-    ${media.laptop} {
-        padding: ${sizes.lg} 0 ${sizes.xxxxl};
-    }
 
     ${media.tablet} {
         display: grid;

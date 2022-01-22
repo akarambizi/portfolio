@@ -4,7 +4,7 @@ import { mixins, sizes } from '../styles';
 import { Title } from '../styles/elements';
 
 const StyledPageTitle = styled.div`
-    padding: ${sizes.xxxxl} 0;
+    padding: ${sizes.xxl} 0 16px;
 
     ${Title} {
         position: relative;
