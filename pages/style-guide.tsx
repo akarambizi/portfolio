@@ -50,7 +50,9 @@ function StyleGuide() {
                 </div>
             </section>
             <section>
-                <Title centered="true" marginBottom="20px">Components</Title>
+                <Title centered="true" marginBottom="20px">
+                    Components
+                </Title>
                 <Grid columns="2">
                     {projects.map((project) => (
                         <Card data={project} key={project.name} large />

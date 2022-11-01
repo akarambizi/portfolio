@@ -88,7 +88,7 @@ const StyledCardLinks = styled.div`
 function Card({ data: { name, image, links, tags }, large }) {
     return (
         <StyledCard>
-            <StyledCardImage large={large}>
+            <StyledCardImage href={links.live} large={large}>
                 <img src={image} alt={name} layout="fill" />
             </StyledCardImage>
             <div>
