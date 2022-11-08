@@ -10,7 +10,8 @@
         "eslint": "eslint ./ --ext js,jsx,ts,tsx",
         "eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
         "prepare": "husky install",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "netlify:deploy": "netlify deploy --dir=./build -p -m \"$(git log -1 --pretty=%B)\""
     },
     "dependencies": {
         "next": "^13.0.1",
@@ -33,6 +34,7 @@
         "eslint-plugin-react": "^7.28.0",
         "husky": "^6.0.0",
         "lint-staged": "^12.1.7",
+        "netlify-cli": "^12.1.0",
         "prettier": "^2.5.1"
     },
     "lint-staged": {
