@@ -13,7 +13,7 @@ export default function ProjectList({ projects, haslargeCard = false, GridColumn
     return (
         <Grid columns={GridColumns} gridGap={sizes.xxxxl}>
             {projects.map((project) => (
-                <Card data={project} key={project.id} large={haslargeCard} />
+                <Card data={project} key={project.title} large={haslargeCard} />
             ))}
         </Grid>
     );
