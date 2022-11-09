@@ -3,7 +3,7 @@ import { Button, Grid } from '../styles/elements';
 
 export default function ProjectsFilter() {
     const projectsTags = projects.map((project) => project.tags);
-    const flattened = [].concat(...projectsTags);
+    const flattened = projectsTags.flat();
     const filters = [...new Set(flattened)];
 
     return (

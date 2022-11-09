@@ -14,7 +14,7 @@ export default function About() {
                 <Text marginBottom={sizes.xxl} fontSize={sizes.xxl}>
                     Some Projects I Have Built:
                 </Text>
-                <ProjectList projects={projects.slice(0, 2)} GridColumns="2" haslargeCard />
+                <ProjectList projects={projects.slice(0, 2)} GridColumns={2} haslargeCard />
             </div>
         </AppContainer>
     );

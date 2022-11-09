@@ -20,7 +20,7 @@ const StyledCard = styled.article`
     }
 `;
 
-const StyledCardImage = styled.a`
+const StyledCardImage = styled.a<{ large: boolean }>`
     position: relative;
     display: block;
     margin-bottom: ${sizes.base};
@@ -85,15 +85,20 @@ const StyledCardLinks = styled.div`
     }
 `;
 
-function Card({ data: { name, image, links, tags }, large }) {
+type CardProps = {
+    data: { title: string; image: string; links: { live: string; github: string }; tags: string[] };
+    large?: boolean;
+};
+
+function Card({ data: { title, image, links, tags }, large = false }: CardProps) {
     return (
         <StyledCard>
             <StyledCardImage href={links.live} large={large}>
-                <img src={image} alt={name} layout="fill" />
+                <img src={image} alt={title} />
             </StyledCardImage>
             <div>
-                <Text bold md marginBottom="0">
-                    {name}
+                <Text bold marginBottom="0">
+                    {title}
                 </Text>
                 <ul>
                     {tags.map((tag) => (

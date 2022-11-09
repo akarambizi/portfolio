@@ -10,7 +10,7 @@ export const AppContainer = styled.div`
     margin: 0 auto;
 `;
 
-export const Grid = styled.section`
+export const Grid = styled.section<{ gridGap?: string; padding?: string; transition?: string; columns?: number }>`
     /* align-items: center; */
     display: grid;
     gap: ${({ gridGap }) => gridGap || `0 ${sizes.xxxl}`};
@@ -18,7 +18,7 @@ export const Grid = styled.section`
 
     ${media.laptop} {
         padding: ${({ padding }) => padding && `${sizes.xxxxl} 0`};
-        ${({ transition }) => transition && mixins.opacityAnimation}
+        ${({ transition }) => transition}
     }
 
     ${({ columns }) => {
@@ -30,7 +30,7 @@ export const Grid = styled.section`
     }};
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h1<{ fullWidth?: boolean; marginBottom?: string; centered?: boolean; fontSize?: string; fontWeight?: string; lineHeight?: string }>`
     width: ${({ fullWidth }) => fullWidth && '100%'};
     margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xs};
     letter-spacing: 0;
@@ -40,7 +40,7 @@ export const Title = styled.h1`
     line-height: ${({ lineHeight }) => lineHeight || '46px'};
 `;
 
-export const Text = styled.p`
+export const Text = styled.p<{ display?: string; width?: string; marginBottom?: string; textColor?: string; fontSize?: string; bold?: boolean; heading?: string; fullWidth?: string; centered?: string; small?: string }>`
     display: ${({ display }) => display};
     width: ${({ width }) => width};
     margin-bottom: ${({ marginBottom }) => marginBottom || sizes.xxxs};
@@ -70,7 +70,7 @@ export const Anchor = styled.a`
     text-transform: capitalize;
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ secondary?: boolean }>`
     ${mixins.button}
 `;
 
@@ -94,8 +94,7 @@ export const ListItem = styled.li`
     }
 `;
 
-export const ColorBox = styled.div`
+export const ColorBox = styled.div<{ bg: string }>`
     height: 90px;
-    //background: ${({ bg }) => `var(--${bg})`};
     border-radius: ${sizes.base};
 `;

@@ -22,7 +22,11 @@ const StyledPageTitle = styled.div`
         animation: ${mixins.floating} 5s infinite ease-in-out;
     }
 `;
-export default function PageTitle({ title }) {
+interface PageTitleProps {
+    title: string;
+}
+
+export default function PageTitle({ title }: PageTitleProps) {
     return (
         <StyledPageTitle>
             <Title fontSize="38px" marginBottom="16px">

@@ -1,6 +1,6 @@
 {
     "parser": "@babel/eslint-parser",
-    "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+    "extends": ["plugin:react/recommended", "airbnb", "prettier", "next"],
     "plugins": ["react", "prettier"],
     "settings": {
         "react": {
@@ -28,13 +28,15 @@
                 "tsx": "never"
             }
         ],
-        "react/prop-types": "off",
+        "react/prop-types": "off", // Since we do not use prop-types
+        "react/require-default-props": "off", // Since we do not use prop-types
         "react/react-in-jsx-scope": "off",
         "react/jsx-props-no-spreading": "off",
         // Indent with 4 spaces
         "indent": ["error", 4],
         // Indent JSX with 4 spaces
         "react/jsx-indent": ["error", 4],
-        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+        "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "no-undef": "off"
     }
 }

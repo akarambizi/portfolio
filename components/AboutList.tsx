@@ -6,10 +6,15 @@ const StyledAboutList = styled.div`
     margin-bottom: ${sizes.xxs};
 `;
 
-export default function AboutList({ title, list }) {
+interface AboutListProps {
+    title: string;
+    list: string[];
+}
+
+export default function AboutList({ title, list }: AboutListProps) {
     return (
         <StyledAboutList>
-            <Text bold md marginBottom="0">
+            <Text bold marginBottom="0">
                 {title}:
             </Text>
             <ul>
