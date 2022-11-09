@@ -67,6 +67,7 @@ function Hero() {
                     <Text as="span">Hey,</Text>
                     <Title>
                         I’m <span>Arthur Karambizi.</span> a Software Engineer.
+                        <p>testing deployment</p>
                     </Title>
                     <Text marginBottom={sizes.xxxxl}>I&apos;m a software engineer with an interest in building the most effective websites possible. For over a year, I&#39;ve learned about the fundamentals of programming and web development.</Text>
                     <Button secondary>Projects</Button>
