@@ -34,6 +34,9 @@ jobs:
       - image: cimg/node:16.10
     steps:
       - checkout
+      - node/install-packages:
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: npm
       - run:
           name: Run Jest testing
           command: npm run test
@@ -42,8 +45,11 @@ jobs:
       - image: cimg/node:16.10
     steps:
       - checkout
+      - node/install-packages:
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: npm
       - run:
-          name: Deploy project to netlify
+          name: Deploy to netlify
           command: npm run netlify:deploy
 
 workflows:
