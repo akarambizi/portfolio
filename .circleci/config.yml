@@ -6,20 +6,19 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.7
 
-
-defaults: &defaults
-  #working_directory: ./circleci
+# Default container configuration
+container_config: &container_config #working_directory: ./circleci
   docker:
     - image: cimg/node:16.10
 
 attach_workspace: &attach_workspace
-    attach_workspace:
-      at: .
+  attach_workspace:
+    at: .
 
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   prepare:
-    <<: *defaults
+    <<: *container_config
     steps:
       - checkout
       # Download and cache dependencies
@@ -33,7 +32,7 @@ jobs:
           paths:
             - node_modules
   build:
-    <<: *defaults
+    <<: *container_config
     steps:
       - checkout
       - *attach_workspace
@@ -43,13 +42,13 @@ jobs:
           paths:
             - .next
   test:
-    <<: *defaults
+    <<: *container_config
     steps:
       - checkout
       - *attach_workspace
       - run: npm run test
   deploy-prod:
-    <<: *defaults
+    <<: *container_config
     steps:
       - checkout
       - *attach_workspace
