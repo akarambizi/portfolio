@@ -6,19 +6,15 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.7
 
-references:
-  working_directory: &working_directory
-    .
 
 defaults: &defaults
   #working_directory: ./circleci
   docker:
     - image: cimg/node:16.10
-  working_directory: *working_directory
 
 attach_workspace: &attach_workspace
     attach_workspace:
-      at: *working_directory
+      at: .
 
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
