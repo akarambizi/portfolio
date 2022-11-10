@@ -8,7 +8,7 @@ orbs:
 
 references:
   working_directory: &working_directory
-    ./
+    .
 
 defaults: &defaults
   #working_directory: ./circleci
