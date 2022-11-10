@@ -22,8 +22,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
+    "**/*.tsx",
+    "jest.config.js"
+, "tests/components/Hero.test.tsx"  ],
   "exclude": [
     "node_modules"
   ]
