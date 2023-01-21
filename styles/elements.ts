@@ -10,11 +10,12 @@ export const AppContainer = styled.div`
     margin: 0 auto;
 `;
 
-export const Grid = styled.section<{ gridGap?: string; padding?: string; transition?: string; columns?: number }>`
+export const Grid = styled.section<{ gridGap?: string; padding?: string; marginBottom?: string; transition?: string; columns?: number }>`
     /* align-items: center; */
     display: grid;
     gap: ${({ gridGap }) => gridGap || `0 ${sizes.xxxl}`};
     padding: ${({ padding }) => padding && `${sizes.xs} 0`};
+    margin-bottom: ${({ marginBottom }) => marginBottom || `0`};
 
     ${media.laptop} {
         padding: ${({ padding }) => padding && `${sizes.xxxxl} 0`};

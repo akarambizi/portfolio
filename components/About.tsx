@@ -1,7 +1,7 @@
 import AboutCard from './AboutCard';
 import PageTitle from './PageTitle';
 import ProjectList from './ProjectList';
-import { AppContainer, Text } from '../styles/elements';
+import { AppContainer, Text, Button } from '../styles/elements';
 import { sizes } from '../styles';
 import projects from '../assets/json/projects.json';
 
@@ -14,7 +14,8 @@ export default function About() {
                 <Text marginBottom={sizes.xxl} fontSize={sizes.xxl}>
                     Some Projects I Have Built:
                 </Text>
-                <ProjectList projects={projects.slice(0, 2)} GridColumns={2} haslargeCard />
+                <ProjectList projects={projects.slice(0, 2)} GridColumns={2} haslargeCard marginBottom={sizes.xxl} />
+                <Button>View All</Button>
             </div>
         </AppContainer>
     );
