@@ -64,6 +64,7 @@ function Hero() {
         <StyledHero>
             <AppContainer>
                 <StyledHeroContent>
+                    <p>test hero page</p>
                     <Text as="span">Hey,</Text>
                     <Title>
                         I’m <span>Arthur Karambizi.</span> a Software Engineer.
