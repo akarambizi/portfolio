@@ -5,7 +5,7 @@ import { StyledAboutCard } from './About.styles';
 
 export function AboutCard() {
     return (
-        <StyledAboutCard>
+        <StyledAboutCard data-testid="about-card">
             <img src="https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Arthur Karambizi" />
             <div>
                 <Text bold marginBottom="0" fontSize="18px">

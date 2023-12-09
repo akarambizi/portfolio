@@ -6,7 +6,7 @@ import { CardProps } from './Card.types';
 
 export function Card({ data: { title, image, links, tags }, large = false }: CardProps) {
     return (
-        <StyledCard>
+        <StyledCard data-testid="project-card">
             <StyledCardImage href={links.live} large={large}>
                 <img src={image} alt={title} />
             </StyledCardImage>
