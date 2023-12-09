@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import { AppContainer } from '../styles/elements';
-import { Header, Footer, ProjectList, PageTitle, ProjectsFilter } from '../components';
-import projects from '../assets/json/projects.json';
+import { Header, Footer, Projects, PageTitle, ProjectsFilter } from '../components';
+import projectsList from '../assets/json/projects.json';
 
 const StyledProjects = styled.main`
     padding: 32px 0;
 `;
-function Projects() {
+
+function ProjectsPage() {
     return (
         <>
             <Head>
@@ -20,7 +21,7 @@ function Projects() {
                 <AppContainer>
                     <PageTitle title="Projects." />
                     <ProjectsFilter />
-                    <ProjectList projects={projects} GridColumns={3} />
+                    <Projects projects={projectsList} GridColumns={3} />
                 </AppContainer>
             </StyledProjects>
             <Footer />
@@ -28,4 +29,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default ProjectsPage;

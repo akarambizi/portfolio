@@ -1,11 +1,11 @@
-import { AboutCard } from './AboutCard';
-import PageTitle from '../PageTitle';
-import ProjectList from '../ProjectList';
-import { AppContainer, Text, Button } from '../../styles/elements';
+import projectsList from '../../assets/json/projects.json';
 import { sizes } from '../../styles';
-import projects from '../../assets/json/projects.json';
+import { AppContainer, Button, Text } from '../../styles/elements';
+import { PageTitle } from '../PageTitle/PageTitle';
+import { Projects } from '../Projects/Projects';
+import { AboutCard } from './AboutCard';
 
-export default function About() {
+export function About() {
     return (
         <AppContainer id="about">
             <PageTitle title="About Me." />
@@ -14,7 +14,7 @@ export default function About() {
                 <Text marginBottom={sizes.xxl} fontSize={sizes.xxl}>
                     Some Projects I Have Built:
                 </Text>
-                <ProjectList projects={projects.slice(0, 2)} GridColumns={2} haslargeCard marginBottom={sizes.xxl} />
+                <Projects projects={projectsList.slice(0, 2)} GridColumns={2} haslargeCard marginBottom={sizes.xxl} />
                 <Button>View All</Button>
             </div>
         </AppContainer>

@@ -1,29 +1,8 @@
-import styled from 'styled-components';
 import Link from 'next/link';
-import { AppContainer } from '../styles/elements';
-import { mixins, sizes } from '../styles';
+import { AppContainer } from '../../styles/elements';
+import { StyledHeader, StyledLogo } from './Header.styles';
 
-const StyledHeader = styled.header`
-    width: 100%;
-    padding: ${sizes.xl} 0;
-
-    ${AppContainer} {
-        ${mixins.flexBetween}
-
-        ul {
-            ${mixins.flex}
-        }
-    }
-`;
-
-const StyledLogo = styled.div`
-    a {
-        font-size: ${sizes.xxl};
-        font-weight: 700;
-    }
-`;
-
-function Header() {
+export function Header() {
     return (
         <StyledHeader>
             <AppContainer>
@@ -42,5 +21,3 @@ function Header() {
         </StyledHeader>
     );
 }
-
-export default Header;

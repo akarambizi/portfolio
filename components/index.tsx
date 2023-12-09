@@ -1,8 +1,8 @@
-export { default as About } from './About/About';
-export { default as Card } from './Card';
-export { default as Footer } from './Footer';
-export { default as Header } from './Header';
+export { About } from './About/About';
+export { Card } from './Card/Card';
+export { Footer } from './Footer/Footer';
+export { Header } from './Header/Header';
 export { Hero } from './Hero/Hero';
-export { default as PageTitle } from './PageTitle';
-export { default as ProjectList } from './ProjectList';
-export { default as ProjectsFilter } from './ProjectsFilter';
+export { PageTitle } from './PageTitle/PageTitle';
+export { Projects } from './Projects/Projects';
+export { ProjectsFilter } from './Projects/ProjectsFilter';

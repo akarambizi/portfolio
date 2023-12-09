@@ -1,7 +1,7 @@
-import projects from '../assets/json/projects.json';
-import { Button, Grid } from '../styles/elements';
+import projects from '../../assets/json/projects.json';
+import { Button, Grid } from '../../styles/elements';
 
-export default function ProjectsFilter() {
+export function ProjectsFilter() {
     const projectsTags = projects.map((project) => project.tags);
     const flattened = projectsTags.flat();
     const filters = [...new Set(flattened)];
