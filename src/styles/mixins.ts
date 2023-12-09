@@ -2,6 +2,12 @@ import { css, keyframes } from 'styled-components';
 import colors from './variables/colors';
 import sizes from './variables/sizes';
 
+interface ButtonProps {
+    inlineBlock?: boolean;
+    width?: string;
+    secondary?: boolean;
+}
+
 const mixins = {
     flex: css`
         display: flex;
@@ -71,7 +77,7 @@ const mixins = {
         left: 0;
         width: 100%;
     `,
-    button: css`
+    button: css<ButtonProps>`
         display: ${({ inlineBlock }) => (inlineBlock ? 'inline-block' : 'block')};
         width: ${({ width }) => width};
         min-width: 142px;
@@ -103,7 +109,7 @@ const mixins = {
         0% { transform: translate(0,  0px); }
         50%  { transform: translate(0, 10px); }
         100%   { transform: translate(0, -0px); }
-    `
+    `,
 };
 
 export default mixins;

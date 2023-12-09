@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon } from '../../assets/images';
+import { GithubIcon, LinkedinIcon } from '../../../assets/images';
 import { sizes } from '../../styles';
 import { AppContainer, Text } from '../../styles/elements';
 import { StyledFooter } from './Footer.styles';

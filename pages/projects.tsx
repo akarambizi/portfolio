@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { AppContainer } from '../styles/elements';
-import { Header, Footer, Projects, PageTitle, ProjectsFilter } from '../components';
+import { AppContainer } from '../src/styles/elements';
+import { Header, Footer, Projects, PageTitle, ProjectsFilter } from '../src/components';
 import projectsList from '../assets/json/projects.json';
 
 const StyledProjects = styled.main`

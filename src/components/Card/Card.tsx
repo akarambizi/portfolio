@@ -1,4 +1,4 @@
-import { ExternalLink, GithubIcon } from '../../assets/images';
+import { ExternalLink, GithubIcon } from '../../../assets/images';
 import { sizes } from '../../styles';
 import { Text } from '../../styles/elements';
 import { StyledCard, StyledCardImage, StyledCardLinks } from './Card.styles';

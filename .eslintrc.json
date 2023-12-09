@@ -39,6 +39,7 @@
         "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
         "no-undef": "off",
         "import/prefer-default-export": "off",
-        "react/destructuring-assignment": "off"
+        "react/destructuring-assignment": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.tsx", "**/*.spec.tsx"] }]
     }
 }

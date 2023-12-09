@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Bubbles, ShapeIcon } from '../../assets/images';
+import { Bubbles, ShapeIcon } from '../../../assets/images';
 import { AppContainer, Title, Text, Button } from '../../styles/elements';
 import { media, mixins, colors, sizes } from '../../styles';
 import { StyledHero, StyledHeroContent, StyledHeroShapeIcon } from './Hero.styles';

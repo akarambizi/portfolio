@@ -1,4 +1,4 @@
-import projectsList from '../../assets/json/projects.json';
+import projectsList from '../../../assets/json/projects.json';
 import { sizes } from '../../styles';
 import { AppContainer, Button, Text } from '../../styles/elements';
 import { PageTitle } from '../PageTitle/PageTitle';

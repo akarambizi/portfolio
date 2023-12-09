@@ -1,6 +1,6 @@
 import projects from '../assets/json/projects.json';
-import { Card } from '../components';
-import { AppContainer, Button, ColorBox, Grid, Text, Title } from '../styles/elements';
+import { Card } from '../src/components';
+import { AppContainer, Button, ColorBox, Grid, Text, Title } from '../src/styles/elements';
 
 function StyleGuide() {
     return (

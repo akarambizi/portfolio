@@ -8,7 +8,7 @@ const sizes = {
     xl: '20px',
     xxl: '24px',
     xxxl: '30px',
-    xxxxl: '36px'
+    xxxxl: '36px',
 };
 
 export default sizes;

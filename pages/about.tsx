@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Header, Footer, About } from '../components';
+import { Header, Footer, About } from '../src/components';
 
 const StyledAbout = styled.main`
     padding: 32px 0 80px 0;

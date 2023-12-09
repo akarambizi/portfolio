@@ -1,4 +1,4 @@
-import projects from '../../assets/json/projects.json';
+import projects from '../../../assets/json/projects.json';
 import { Button, Grid } from '../../styles/elements';
 
 export function ProjectsFilter() {
