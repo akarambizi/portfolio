@@ -4,10 +4,10 @@ import mixins from './mixins';
 import sizes from './variables/sizes';
 
 export const AppContainer = styled.div`
-    /* min-width: 100%; */
     padding: 0 ${sizes.xl};
     max-width: 1110px;
     margin: 0 auto;
+    width: 100%;
 `;
 
 export const Grid = styled.section<{ gridGap?: string; padding?: string; marginBottom?: string; transition?: string; columns?: number }>`

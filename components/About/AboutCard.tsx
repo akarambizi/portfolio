@@ -1,46 +1,9 @@
-import styled from 'styled-components';
 import AboutList from './AboutList';
-import { sizes, mixins, media } from '../styles';
-import { Text } from '../styles/elements';
-import about from '../assets/json/about.json';
+import { Text } from '../../styles/elements';
+import about from '../../assets/json/about.json';
+import { StyledAboutCard } from './About.styles';
 
-const StyledAboutCard = styled.section`
-    margin-bottom: ${sizes.xxxxl};
-
-    ${media.tablet} {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-between;
-        grid-gap: 0 50px;
-    }
-
-    img {
-        display: block;
-        width: 100%;
-        height: 380px;
-        border-radius: ${sizes.xs};
-        cursor: pointer;
-        object-fit: cover;
-        margin-bottom: ${sizes.lg};
-    }
-
-    div {
-        width: 100%;
-    }
-
-    ul {
-        li {
-            ${mixins.inlineBlock}
-            margin-right: ${sizes.xxxs};
-        }
-
-        svg {
-            height: ${sizes.xl};
-            width: ${sizes.xl};
-        }
-    }
-`;
-export default function AboutCard() {
+export function AboutCard() {
     return (
         <StyledAboutCard>
             <img src="https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Arthur Karambizi" />

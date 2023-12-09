@@ -1,9 +1,9 @@
-import AboutCard from './AboutCard';
-import PageTitle from './PageTitle';
-import ProjectList from './ProjectList';
-import { AppContainer, Text, Button } from '../styles/elements';
-import { sizes } from '../styles';
-import projects from '../assets/json/projects.json';
+import { AboutCard } from './AboutCard';
+import PageTitle from '../PageTitle';
+import ProjectList from '../ProjectList';
+import { AppContainer, Text, Button } from '../../styles/elements';
+import { sizes } from '../../styles';
+import projects from '../../assets/json/projects.json';
 
 export default function About() {
     return (
