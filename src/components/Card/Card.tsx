@@ -1,6 +1,6 @@
-import { ExternalLink, GithubIcon } from '../../../assets/images';
-import { sizes } from '../../styles';
-import { Text } from '../../styles/elements';
+import { ExternalLink, GithubIcon } from '../../assets/images';
+import { sizes } from '../../assets/styles';
+import { Text } from '../../assets/styles/elements';
 import { StyledCard, StyledCardImage, StyledCardLinks } from './Card.styles';
 import { CardProps } from './Card.types';
 

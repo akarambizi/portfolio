@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { mixins, sizes } from '../../styles';
-import { Title } from '../../styles/elements';
+import { mixins, sizes } from '../../assets/styles';
+import { Title } from '../../assets/styles/elements';
 
 export const StyledPageTitle = styled.div`
     padding: ${sizes.xxl} 0 16px;

@@ -1,5 +1,5 @@
-import projects from '../../../assets/json/projects.json';
-import { Button, Grid } from '../../styles/elements';
+import projects from '../../assets/json/projects.json';
+import { Button, Grid } from '../../assets/styles/elements';
 
 export function ProjectsFilter() {
     const projectsTags = projects.map((project) => project.tags);

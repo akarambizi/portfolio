@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Bubbles, ShapeIcon } from '../../../assets/images';
-import { AppContainer, Title, Text, Button } from '../../styles/elements';
-import { media, mixins, colors, sizes } from '../../styles';
+import { Bubbles, ShapeIcon } from '../../assets/images';
+import { AppContainer, Title, Text, Button } from '../../assets/styles/elements';
+import { media, mixins, colors, sizes } from '../../assets/styles';
 import { StyledHero, StyledHeroContent, StyledHeroShapeIcon } from './Hero.styles';
 
 export function Hero() {

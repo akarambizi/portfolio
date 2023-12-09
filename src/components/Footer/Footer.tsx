@@ -1,6 +1,6 @@
-import { GithubIcon, LinkedinIcon } from '../../../assets/images';
-import { sizes } from '../../styles';
-import { AppContainer, Text } from '../../styles/elements';
+import { GithubIcon, LinkedinIcon } from '../../assets/images';
+import { sizes } from '../../assets/styles';
+import { AppContainer, Text } from '../../assets/styles/elements';
 import { StyledFooter } from './Footer.styles';
 
 export function Footer() {

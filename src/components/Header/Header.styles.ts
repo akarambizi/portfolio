@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { AppContainer } from '../../styles/elements';
-import { mixins, sizes } from '../../styles';
+import { AppContainer } from '../../assets/styles/elements';
+import { mixins, sizes } from '../../assets/styles';
 
 export const StyledHeader = styled.header`
     width: 100%;

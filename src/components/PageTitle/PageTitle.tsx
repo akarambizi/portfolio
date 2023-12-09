@@ -1,5 +1,5 @@
-import { Bubbles } from '../../../assets/images';
-import { Title } from '../../styles/elements';
+import { Bubbles } from '../../assets/images';
+import { Title } from '../../assets/styles/elements';
 import { StyledPageTitle } from './PageTitle.styles';
 import { PageTitleProps } from './PageTitle.types';
 

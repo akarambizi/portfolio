@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AppContainer } from '../../styles/elements';
+import { AppContainer } from '../../assets/styles/elements';
 import { StyledHeader, StyledLogo } from './Header.styles';
 
 export function Header() {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { AppContainer } from '../../styles/elements';
-import { media, mixins, colors, sizes } from '../../styles';
+import { AppContainer } from '../../assets/styles/elements';
+import { media, mixins, colors, sizes } from '../../assets/styles';
 
 export const StyledHero = styled.section`
     ${mixins.flex}

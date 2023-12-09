@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors, mixins, sizes } from '../../styles';
-import { AppContainer } from '../../styles/elements';
+import { colors, mixins, sizes } from '../../assets/styles';
+import { AppContainer } from '../../assets/styles/elements';
 
 export const StyledFooter = styled.footer`
     text-align: center;

@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function ShapeIcon() {
+export function ShapeIcon() {
     return (
         <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>

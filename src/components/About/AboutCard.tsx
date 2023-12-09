@@ -1,6 +1,6 @@
 import AboutList from './AboutList';
-import { Text } from '../../styles/elements';
-import about from '../../../assets/json/about.json';
+import { Text } from '../../assets/styles/elements';
+import about from '../../assets/json/about.json';
 import { StyledAboutCard } from './About.styles';
 
 export function AboutCard() {

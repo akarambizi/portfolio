@@ -1,6 +1,6 @@
 import { Card } from '../Card/Card';
-import { Grid } from '../../styles/elements';
-import { sizes } from '../../styles';
+import { Grid } from '../../assets/styles/elements';
+import { sizes } from '../../assets/styles';
 import { ProjectsListProps } from './Projects.types';
 
 export function Projects({ projects, haslargeCard = false, GridColumns = 4, marginBottom = '0' }: ProjectsListProps) {

@@ -1,4 +1,4 @@
-import { Text } from '../../styles/elements';
+import { Text } from '../../assets/styles/elements';
 import { AboutListProps } from './About.types';
 import { StyledAboutList } from './About.styles';
 

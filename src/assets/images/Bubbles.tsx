@@ -1,4 +1,4 @@
-export default function Bubbles() {
+export function Bubbles() {
     return (
         <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>bubbles</title>

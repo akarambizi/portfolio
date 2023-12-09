@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors, media, mixins, sizes } from '../../styles';
+import { colors, media, mixins, sizes } from '../../assets/styles';
 
 export const StyledCard = styled.article`
     padding: ${sizes.xxs};

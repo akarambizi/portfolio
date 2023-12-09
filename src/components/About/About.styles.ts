@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { sizes, mixins, media } from '../../styles';
+import { sizes, mixins, media } from '../../assets/styles';
 
 export const StyledAboutCard = styled.section`
     margin-bottom: ${sizes.xxxxl};
