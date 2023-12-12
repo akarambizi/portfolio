@@ -7,13 +7,15 @@ jest.mock('../../assets/json/projects.json', () => [
 ]);
 
 describe('ProjectsFilter', () => {
-    it('renders project filter content', () => {
+    beforeEach(() => {
         render(<ProjectsFilter />);
+    });
+
+    it('renders project filter content', () => {
         expect(screen.getByText('ALL')).toBeInTheDocument();
     });
 
     it('displays the correct number of filter buttons', () => {
-        render(<ProjectsFilter />);
         const buttons = screen.getAllByRole('button');
         expect(buttons).toHaveLength(5); // 4 unique tags + 1 ALL button
     });

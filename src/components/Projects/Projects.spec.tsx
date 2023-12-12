@@ -10,14 +10,16 @@ const mockProjects: ProjectsListProps = {
 };
 
 describe('Projects', () => {
-    it('renders Projects content', () => {
+    beforeEach(() => {
         render(<Projects {...mockProjects} />);
+    });
+
+    it('renders Projects content', () => {
         expect(screen.getByText('Project 1')).toBeInTheDocument();
         expect(screen.getByText('Project 2')).toBeInTheDocument();
     });
 
     it('displays the correct number of cards', () => {
-        render(<Projects {...mockProjects} />);
         const cards = screen.getAllByTestId('project-card');
         expect(cards).toHaveLength(mockProjects.projects.length);
     });

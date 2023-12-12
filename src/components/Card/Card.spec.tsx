@@ -15,19 +15,20 @@ const mockData: CardProps = {
 };
 
 describe('Card', () => {
-    it('renders Card content', () => {
+    beforeEach(() => {
         render(<Card {...mockData} />);
+    });
+
+    it('renders Card content', () => {
         expect(screen.getByText('Test Title')).toBeInTheDocument();
     });
 
     it('displays the correct tags', () => {
-        render(<Card {...mockData} />);
         expect(screen.getByText('tag1')).toBeInTheDocument();
         expect(screen.getByText('tag2')).toBeInTheDocument();
     });
 
     it('displays the correct links', () => {
-        render(<Card {...mockData} />);
         const githubLink = screen.getByRole('link', { name: /Code/i });
         const liveLink = screen.getByRole('link', { name: /Live Preview/i });
         expect(githubLink).toHaveAttribute('href', 'https://github-link.com');
