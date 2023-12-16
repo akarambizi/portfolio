@@ -8,7 +8,7 @@ export function PageTitle(props: PageTitleProps) {
         <StyledPageTitle>
             <Title fontSize="38px" marginBottom="16px">
                 <span>{props.title}</span>
-                <Bubbles />
+                <Bubbles data-testid="page-title-bubbles" />
             </Title>
         </StyledPageTitle>
     );
