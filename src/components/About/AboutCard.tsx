@@ -11,10 +11,10 @@ export function AboutCard() {
                 <Text bold marginBottom="0" fontSize="18px">
                     Arthur Karambizi
                 </Text>
-                <Text marginBottom="16px" fontSize="14px">
-                    Front End developer
+                <Text marginBottom="8px" fontSize="14px">
+                    Software Engineer
                 </Text>
-                <Text>Hello My name is Arthur Karambizi. I love building websites And I also enjoy other activities like Soccer, music and art.</Text>
+                <Text>Hello My name is Arthur Karambizi. I am a passionate software engineer who loves building websites. In addition to coding, I enjoy activities such as soccer, music, and art.</Text>
 
                 <AboutList title=" Languages" list={about.languages} />
                 <AboutList title="Tools" list={about.tools} />

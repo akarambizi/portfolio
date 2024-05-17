@@ -13,7 +13,7 @@ export function Hero() {
                         I’m <span>Arthur Karambizi.</span> a Software Engineer.
                     </Title>
                     <Text marginBottom={sizes.xxl}>I&apos;m a software engineer with an interest in building the most effective websites possible.</Text>
-                    <Button secondary>Projects</Button>
+                    <Button>Projects</Button>
                     <Bubbles />
                 </StyledHeroContent>
                 <StyledHeroShapeIcon>
