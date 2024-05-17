@@ -20,7 +20,7 @@ describe('About', () => {
     });
 
     it('displays the view all button', () => {
-        const button = screen.getByRole('button', { name: /View All/i });
+        const button = screen.getByRole('link', { name: /View All/i });
         expect(button).toBeInTheDocument();
     });
 });
