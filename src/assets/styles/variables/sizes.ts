@@ -1,4 +1,5 @@
 const sizes = {
+    xxxxs: '6px',
     xxxs: '8px',
     xxs: '10px',
     xs: '12px',

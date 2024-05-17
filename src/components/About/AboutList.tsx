@@ -11,10 +11,10 @@ export default function AboutList(props: AboutListProps) {
             <ul>
                 {props.list.map((item, index) => (
                     <li key={item}>
-                        <p>
+                        <Text fontSize="14px" marginBottom="0">
                             {item}
                             {index < props.list.length - 1 && ', '}
-                        </p>
+                        </Text>
                     </li>
                 ))}
             </ul>

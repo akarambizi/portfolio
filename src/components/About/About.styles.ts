@@ -39,5 +39,5 @@ export const StyledAboutCard = styled.section`
 `;
 
 export const StyledAboutList = styled.div`
-    margin-bottom: ${sizes.xxs};
+    margin-bottom: ${sizes.xxxxs};
 `;
