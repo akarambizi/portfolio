@@ -7,7 +7,10 @@ describe('Footer', () => {
     });
 
     it('renders footer content', () => {
-        expect(screen.getByText('© 2021. Arthur Karambizi')).toBeInTheDocument();
+        const textFooter = `© ${new Date().getFullYear()}. Arthur Karambizi`;
+        const getContent = screen.getByText(textFooter);
+
+        expect(getContent).toBeInTheDocument();
     });
 
     it('displays the correct links', () => {

@@ -20,7 +20,7 @@ export function Footer() {
                     </li>
                 </ul>
                 <div>
-                    <Text fontSize={sizes.sm}>&copy; 2021. Arthur Karambizi</Text>
+                    <Text fontSize={sizes.sm}>&copy; {new Date().getFullYear()}. Arthur Karambizi</Text>
                 </div>
             </AppContainer>
         </StyledFooter>
