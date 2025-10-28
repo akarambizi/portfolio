@@ -77,9 +77,10 @@ export function SinglePageLayout() {
     return (
         <S.MainContainer>
             <S.FloatingElements>
-                <div className="floating-orb" />
-                <div className="floating-orb" />
-                <div className="floating-orb" />
+                <div className="floating-shape" />
+                <div className="floating-shape" />
+                <div className="floating-shape" />
+                <div className="floating-shape" />
             </S.FloatingElements>
 
             <S.ContentWrapper>

@@ -8,8 +8,17 @@ const glow = keyframes`
 `;
 
 const float = keyframes`
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
+    0%, 100% { transform: translateY(0) translateX(0) translateZ(0); }
+    25% { transform: translateY(-30px) translateX(10px) translateZ(20px); }
+    50% { transform: translateY(-60px) translateX(-5px) translateZ(-10px); }
+    75% { transform: translateY(-30px) translateX(-10px) translateZ(30px); }
+`;
+
+const rotateShape = keyframes`
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    33% { transform: rotateX(120deg) rotateY(120deg) rotateZ(0deg); }
+    66% { transform: rotateX(240deg) rotateY(240deg) rotateZ(120deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
 `;
 
 const pulse = keyframes`
@@ -31,39 +40,65 @@ export const FloatingElements = styled.div`
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 
-    .floating-orb {
+    .floating-shape {
         position: absolute;
-        border-radius: 50%;
-        background: ${colors.gradientPrimary};
-        filter: blur(1px);
-        animation: ${float} 6s ease-in-out infinite;
+        transform-style: preserve-3d;
+        animation: ${float} 8s ease-in-out infinite;
 
         &:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: 10%;
-            right: 10%;
-            opacity: 0.1;
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            right: 15%;
+            background: linear-gradient(45deg, ${colors.primary}40, ${colors.secondary}20);
+            border: 1px solid ${colors.primary}60;
+            border-radius: 20px;
+            transform: rotateX(45deg) rotateY(45deg);
+            animation: ${float} 10s ease-in-out infinite, rotateShape 20s linear infinite;
             animation-delay: 0s;
         }
 
         &:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            bottom: 20%;
-            left: 15%;
-            opacity: 0.08;
+            width: 80px;
+            height: 80px;
+            bottom: 25%;
+            left: 20%;
+            background: linear-gradient(135deg, ${colors.secondary}30, ${colors.accent}20);
+            border: 1px solid ${colors.secondary}50;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotateX(60deg) rotateZ(30deg);
+            animation: ${float} 12s ease-in-out infinite, rotateShape 25s linear infinite reverse;
             animation-delay: 2s;
         }
 
         &:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            top: 60%;
-            right: 30%;
-            opacity: 0.06;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 25%;
+            background: linear-gradient(225deg, ${colors.accentPurple}25, ${colors.primary}15);
+            border: 1px solid ${colors.accentPurple}40;
+            border-radius: 50%;
+            transform: rotateY(60deg) rotateX(30deg);
+            animation: ${float} 15s ease-in-out infinite, rotateShape 30s linear infinite;
             animation-delay: 4s;
+        }
+
+        &:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            top: 30%;
+            left: 10%;
+            background: linear-gradient(315deg, ${colors.accent}35, ${colors.primary}20);
+            border: 1px solid ${colors.accent}60;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            transform: rotateX(30deg) rotateZ(45deg);
+            animation: ${float} 8s ease-in-out infinite, rotateShape 18s linear infinite reverse;
+            animation-delay: 6s;
         }
     }
 `;
@@ -120,8 +155,8 @@ export const LeftPanel = styled(motion.aside)`
 `;
 
 export const RightPanel = styled.main`
-    margin-left: 50%;
-    max-width: 800px;
+    margin-left: 40%;
+    max-width: 900px;
     width: calc(50% - ${sizes.xxxxl});
     padding: ${sizes.xxxxl};
     overflow-y: auto;
@@ -427,29 +462,43 @@ export const AboutText = styled.p`
 
 export const TechGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: ${sizes.sm};
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: ${sizes.base};
     margin-top: ${sizes.xl};
+    perspective: 1000px;
 
     .tech-item {
         background: ${colors.glass};
         backdrop-filter: blur(10px);
         border: 1px solid ${colors.glassBorder};
-        border-radius: 8px;
-        padding: ${sizes.sm};
+        border-radius: 12px;
+        padding: ${sizes.base};
         text-align: center;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        position: relative;
+        cursor: pointer;
 
         &:hover {
-            transform: translateY(-2px);
+            transform: rotateX(-10deg) rotateY(10deg) translateZ(10px) translateY(-5px);
             background: rgba(78, 205, 196, 0.1);
-            border-color: rgba(78, 205, 196, 0.3);
+            border-color: rgba(78, 205, 196, 0.4);
+            box-shadow: 0 15px 30px rgba(78, 205, 196, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        &:nth-child(even):hover {
+            transform: rotateX(10deg) rotateY(-10deg) translateZ(10px) translateY(-5px);
         }
 
         .tech-name {
-            font-size: 11px;
-            font-weight: 400;
+            font-size: ${sizes.xs};
+            font-weight: 500;
             color: ${colors.textMuted};
+            transition: color 0.3s ease;
+        }
+
+        &:hover .tech-name {
+            color: ${colors.secondary};
         }
     }
 `;
@@ -482,15 +531,42 @@ export const ExperienceCard = styled.div`
     background: ${colors.glass};
     backdrop-filter: blur(20px);
     border: 1px solid ${colors.glassBorder};
-    border-radius: 12px;
-    padding: ${sizes.xl};
-    margin-bottom: ${sizes.lg};
-    transition: all 0.3s ease;
+    border-radius: 16px;
+    padding: ${sizes.xxl};
+    margin-bottom: ${sizes.xl};
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        z-index: 0;
+    }
 
     &:hover {
         background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(139, 92, 246, 0.3);
-        transform: translateY(-2px);
+        border-color: rgba(139, 92, 246, 0.4);
+        transform: rotateX(-5deg) rotateY(5deg) translateZ(15px) translateY(-5px);
+        box-shadow: 0 25px 50px rgba(139, 92, 246, 0.15), 0 15px 30px rgba(0, 0, 0, 0.2);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
     }
 `;
 
@@ -559,19 +635,46 @@ export const ProjectsList = styled.div`
 `;
 
 export const ProjectItem = styled(motion.article)`
-    padding: ${sizes.xl} 0;
+    padding: ${sizes.xl} ${sizes.lg};
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background: ${colors.glass};
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid ${colors.glassBorder};
+    margin-bottom: ${sizes.lg};
+    position: relative;
+    overflow: hidden;
 
     &:last-child {
-        border-bottom: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transition: left 0.6s ease;
+        z-index: 1;
     }
 
     &:hover {
-        padding-left: ${sizes.base};
+        transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+        box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2), 0 10px 20px rgba(0, 0, 0, 0.3);
+        border-color: rgba(139, 92, 246, 0.4);
+
+        &::before {
+            left: 100%;
+        }
     }
 `;
-
 export const ProjectHeader = styled.div`
     display: flex;
     justify-content: space-between;
