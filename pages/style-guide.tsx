@@ -1,5 +1,4 @@
 import projects from '../src/assets/json/projects.json';
-import { Card } from '../src/components';
 import { AppContainer, Button, ColorBox, Grid, Text, Title } from '../src/assets/styles/elements';
 
 function StyleGuide() {
@@ -53,11 +52,6 @@ function StyleGuide() {
                 <Title centered marginBottom="20px">
                     Components
                 </Title>
-                <Grid columns={2}>
-                    {projects.map((project) => (
-                        <Card data={project} key={project.title} large />
-                    ))}
-                </Grid>
             </section>
         </AppContainer>
     );
